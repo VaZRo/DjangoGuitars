@@ -1,0 +1,463 @@
+body, html{background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.menu.sticky {
+    transform: translateY(-100%);
+}
+
+.logo{
+    width: 70px;
+    filter: grayscale(1);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#find_field{
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: white;
+    border-color: black;
+}
+
+i.fa-solid.fa-magnifying-glass {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#find_field{
+    padding-left: 30px;
+}
+
+.cart, .location{
+    padding: 0px 10px;
+}
+
+.upper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.slidere{
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.slide.active{
+    opacity: 1;
+}
+
+.slidere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text{
+    position: absolute;
+    bottom: 40%;
+    left: 30px;
+    color: white;
+}
+
+.slide-head{
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    font-family: Palanquin ,sans-serif;
+    padding-bottom: 10px;
+    margin-left: 3px;
+}
+
+.slide-p{
+    font-size: 3em;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.shop-button{
+    position: absolute;
+    bottom: 28%;
+    left: 30px;
+    height: 50px;
+    width: 100px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    border: white 0.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-button:hover{
+    background-color: white;
+    color: black;
+}
+
+.cont{
+    padding: 0px 100px;
+}
+
+.brands{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+.ibanez, .fender, .gibson{
+    width: 300px;
+}
+
+.ibanez-d{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+.jackson{
+    width: 400px;
+}
+
+.fender, .gibson, .jackson, .ibanez-d{
+    padding: 10px;
+}
+
+.companies-head{
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px 0px
+}
+
+.metal, .classic{
+    padding: 30px 0px;
+}
+
+.guitars-text{
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    text-align: center;
+}
+
+.big-line{
+    width: 900px;
+    height: 2px;
+    background-color: black;
+    margin: 30px auto;
+    
+}
+
+.guitars{
+    margin: 10px auto;
+    max-width: 1300px;
+}
+
+.guitar{
+    width: 200px;
+    height: 600px;
+}
+
+.stomps .guitar{
+    height: 200px;
+    width: auto;
+}
+
+.model {
+    margin: 0 1.5%;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.model.invisible{
+    display: none;   
+}
+
+.name{
+    padding-top: 50px;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.line{
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin: 10px 0px;
+}
+
+.price{
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.buy{
+    margin: 10px 0px;
+    width: 100px;
+    height: 30px;
+    border: 1.5px solid black;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy:hover{
+    background-color: black;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-left, .button-right{
+    height: 50px;
+    width: 100px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    border: black 0.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+}
+
+.button-left:hover, .button-right:hover{
+    background-color: black;
+    color: white;
+}
+
+.modal.cart-menu{
+    max-width: 800px;
+    width: 800px;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-line{
+    height: 1px;
+    width: 500px;
+    background-color: black;
+    margin: 10px 0px;
+}
+
+.modal-button{
+    height: 50px;
+    width: 100px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    border: black 0.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-button.invisible{
+    display: none;
+}
+
+.modal-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.pos{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    border-top: 1.5px black solid;
+    border-bottom: 1.5px black solid;
+    margin: 15px 0px;
+}
+
+.pos-left img{
+    transform: rotate(90deg);
+    width: auto;
+    height: 110px;
+}
+
+.ava-div{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1.5px black solid;
+}
+
+.pos-left{
+    display: flex;
+    width: 92%;
+    border-right: 1.5px black solid;
+}
+
+.pos-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    padding-left: 10px;
+}
+
+.pos-delete{
+    width: 70px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pos-delete:hover{
+    background-color: rgb(155, 52, 52);
+}
+
+.modal.cart-buy{
+    max-width: 800px;
+    width: 800px;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+}
+
+.modal.cart-buy .modal-body{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.modal-name, .modal-surname, .modal-email, .modal-number, .modal-address{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+#name, #surname, #email, #address, #number{
+    width: 300px;
+    height: 20px;
+}
+
+.error{
+    height: 10px;
+    color: red;
+    font-family: Palanquin Dark ,sans-serif;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.modal.search-buy{
+    max-width: 800px;
+    width: 800px;
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+}
+
+
+.middle{
+    display: flex;
+    background-color: rgb(49, 49, 49);
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-line{
+    display: flex;
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 20px;
+    justify-content: center;
+}
+
+.logo{
+    margin: 0 31px;
+}
+
+.footer-text{
+    font-family: Palanquin Dark ,sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+.down{
+    font-family: Palanquin Dark ,sans-serif;
+    color: white;
+    display: flex;
+    background-color: black;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+.icon i{
+    padding: 0px 10px;
+}
