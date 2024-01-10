@@ -2,20 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <script src="js/jq.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="js/slider.js"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/animation.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/cart.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="../static/css/navbar.css">
     <title>Project</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
 </head>
 
 <body>
@@ -81,29 +79,253 @@
     </div>
 
     <div class="main ">
-        <div class="menu">
-            <div><a href="#"><img src="img/logo.png" class="logo"/></a></div>
-            <div class="search_bar">
-                <label>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" placeholder="Search..." id="find_field"/>
-                </label>
-            </div>
-    
-            <div class="icons">
-                <a class = "cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a class = "location" href="#"><i class="fa-solid fa-location-dot"></i></a>
-            </div>
-        </div>
+<!--        <div class="menu">-->
+<!--            <div><a href="#"><img src="../static/img/logo.png" class="logo"/></a></div>-->
+<!--            <div class="search_bar">-->
+<!--                <label>-->
+<!--                <i class="fa-solid fa-magnifying-glass"></i>-->
+<!--                <input type="search" placeholder="Search..." id="find_field"/>-->
+<!--                </label>-->
+<!--            </div>-->
+
+<!--            <div class="icons">-->
+<!--                <a class = "cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>-->
+<!--                <a class = "location" href="#"><i class="fa-solid fa-location-dot"></i></a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+        <!-- HEADER  -->
+
+        <header class="header menu">
+            <nav class="nav container">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="../static/img/logo.png" class="logo"/>
+                    </a>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+
+                        <!-- DROPDOWN 1 -->
+                        <li class="dropdown__item">
+                            <div class="nav__link dropdown__button">
+                                Guitars <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Brand</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Jackson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Gibson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Fender</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Shape</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Flying V</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Les Paul</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Stratacater</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Category</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">6 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">7 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">8 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">9 String</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- DROPDOWN 2 -->
+                        <li class="dropdown__item">
+                            <div class="nav__link dropdown__button">
+                                Basses <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Brand</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Jackson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Gibson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Fender</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Shape</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Flying V</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Les Paul</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Stratacater</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Category</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">6 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">7 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">8 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">9 String</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- DROPDOWN 2 -->
+                        <li class="dropdown__item">
+                            <div class="nav__link dropdown__button">
+                                Accessories <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Brand</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Jackson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Gibson</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Fender</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Shape</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Flying V</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Les Paul</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Stratacater</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown__group">
+
+                                        <span class="dropdown__title">Shop By Category</span>
+
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">6 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">7 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">8 String</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">9 String</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Header Ends here -->
     
         <div class="upper">
             <div class="slidere">
                 <div class="slide">
-                    <img src="img/slider2.jpg"/>    
+                    <img src="../static/img/slider2.jpg"/>
                     <a href="#"><div class="shop-button">SHOP NOW</div></a>
                 </div>
                 <div class="slide">
-                    <img src="img/slider1.jpg"/>          
+                    <img src="../static/img/slider1.jpg"/>
                     <div class="slide-text">
                         <div class="slide-head">PRO   SERIES</div> 
                         <div class="slide-p">
@@ -120,10 +342,10 @@
                 <div class="companies">
                     <div class="companies-head">FEATURED BRANDS</div>
                     <div class="brands">
-                        <a><img class="gibson" src="img/gibson.png"/></a>
-                        <a><img class="fender" src="img/fender.png"/></a>
-                        <a><img class="jackson" src="img/jackson.png"/></a>
-                        <a><div class="ibanez-d"><img class="ibanez" src="img/ibanez.png"/></div></a>
+                        <a><img class="gibson" src="../static/img/gibson.png"/></a>
+                        <a><img class="fender" src="../static/img/fender.png"/></a>
+                        <a><img class="jackson" src="../static/img/jackson.png"/></a>
+                        <a><div class="ibanez-d"><img class="ibanez" src="../static/img/ibanez.png"/></div></a>
                     </div>
                 </div>
                 <div class="metal">
@@ -183,7 +405,7 @@
                                     <div class="price">1 689.06 $</div>
                                     <div class="buy">Add To Cart</div>
                                 </div>
-                            </div>     
+                            </div>
                         </div>
                         <div class="model">
                             <div class="all">
@@ -194,16 +416,16 @@
                                     <div class="price">727.12 $</div>
                                     <div class="buy">Add To Cart</div>
                                 </div>
-                            </div>             
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="buttons">
                         <div class="button-left">LEFT</div>
                         <div class="button-right">RIGHT</div>
                     </div>
                 </div>
-    
+
                 <div class="classic">
                     <div class="guitars-text">CLASSIC VIBES</div>
                     <div class="big-line"></div>
@@ -261,7 +483,7 @@
                                     <div class="price">1 099.99 $</div>
                                     <div class="buy">Add To Cart</div>
                                 </div>
-                            </div>     
+                            </div>
                         </div>
                         <div class="model">
                             <div class="all">
@@ -272,10 +494,10 @@
                                     <div class="price">879.99 $</div>
                                     <div class="buy">Add To Cart</div>
                                 </div>
-                            </div>             
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="buttons">
                         <div class="button-left">LEFT</div>
                         <div class="button-right">RIGHT</div>
@@ -338,17 +560,28 @@
                                     <div class="price">119.99 $</div>
                                     <div class="buy">Add To Cart</div>
                                 </div>
-                            </div>     
+                            </div>
                         </div>
                     </div>
-    
+
                     <div class="buttons">
                         <div class="button-left">LEFT</div>
                         <div class="button-right">RIGHT</div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
+
+
+    <script src="../static/js/jq.js"></script>
+    <script src="../static/js/slider.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../static/js/animation.js"></script>
+    <script src="../static/js/scroll.js"></script>
+    <script src="../static/js/cart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="../static/js/navbar.js"></script>
 </body>
 
 <footer>
@@ -356,7 +589,7 @@
         <div class="cont">
             <div class="big-line"></div>
             <div class="logo-line">
-                <img src="img/logo.png" class="logo"/>
+                <img src="../static/img/logo.png" class="logo"/>
                 <div class="footer-text">BUY YOUR SOUND</div>
             </div>
             <div class="big-line"></div>
