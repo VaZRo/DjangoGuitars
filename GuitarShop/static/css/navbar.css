@@ -6,10 +6,10 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 0%, 19%);
-  --first-color-lighten: hsl(220, 68%, 97%);
+  --first-color-lighten: hsl(0, 0%, 0%);
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 100%);
-  --body-color: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 0%);
   --header-color: black;
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -42,7 +42,7 @@
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: white;
   /*color: var(--text-color);*/
 }
 
@@ -120,7 +120,7 @@ a {
     left: 0;
     top: 2.5rem;
     width: 100%;
-    height: calc(100vh - 3.5rem);
+    /*height: calc(100vh - 3.5rem);*/
     overflow: auto;
     padding-block: 1.5rem 4rem;
     pointer-events: none;

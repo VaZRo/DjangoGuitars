@@ -1,16 +1,19 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <link rel="stylesheet" href="../static/css/navbar.css">
     <title>Project</title>
     <link rel="icon" type="image/png" href="../static/img/logo.png">
@@ -18,570 +21,442 @@
 
 <body>
 
-    <div id="cart-menu" class="modal cart-menu">
-        <div class="modal-content">
-            <div class="modal-head">SHOPING CART</div>
-            <div class="modal-line"></div>
-            <div class="modal-body"><div class="modal-empty"></div></div>
-            <div class="modal-line"></div>
-            <div class="modal-footer"><div class="modal-button">Buy</div></div>
+<div id="cart-menu" class="modal cart-menu">
+    <div class="modal-content">
+        <div class="modal-head">SHOPING CART</div>
+        <div class="modal-line"></div>
+        <div class="modal-body">
+            <div class="modal-empty"></div>
+        </div>
+        <div class="modal-line"></div>
+        <div class="modal-footer">
+            <div class="modal-button">Buy</div>
         </div>
     </div>
+</div>
 
-    <div id="cart-buy" class="modal cart-buy">
-        <div class="modal-content">
-            <div class="modal-head">
-                <div class="modal-pos"></div>
-                <div class="modal-price"></div>
+<div id="cart-buy" class="modal cart-buy">
+    <div class="modal-content">
+        <div class="modal-head">
+            <div class="modal-pos"></div>
+            <div class="modal-price"></div>
+        </div>
+        <div class="modal-line"></div>
+        <div class="modal-body">
+            <div class="modal-name">
+                <div>First Name</div>
+                <input type="text" id="name"/>
             </div>
-            <div class="modal-line"></div>
-            <div class="modal-body">
-                <div class="modal-name">
-                    <div>First Name</div>
-                    <input type="text" id="name"/>
-                </div>
-                <div class="error" id="name-error"></div>
-                <div class="modal-surname">
-                    <div>Last Name</div>
-                    <input type="text" id="surname"/>
-                </div>
-                <div class="error" id="surname-error"></div>
-                <div class="modal-address">
-                    <div>Addres</div>
-                    <input type="text" id="address"/>
-                </div>
-                <div class="error" id="address-error"></div>
-                <div class="modal-email">
-                    <div>Email</div>
-                    <input type="text" id="email"/>
-                </div>
-                <div class="error" id="email-error"></div>
-                <div class="modal-number">
-                    <div>Tel.Number</div>
-                    <input type="text" id="number"/>
-                </div>
-                <div class="error" id="number-error"></div>
+            <div class="error" id="name-error"></div>
+            <div class="modal-surname">
+                <div>Last Name</div>
+                <input type="text" id="surname"/>
             </div>
-            <div class="modal-line"></div>
-            <div class="modal-footer"><div class="modal-button">Buy</div></div>
+            <div class="error" id="surname-error"></div>
+            <div class="modal-address">
+                <div>Addres</div>
+                <input type="text" id="address"/>
+            </div>
+            <div class="error" id="address-error"></div>
+            <div class="modal-email">
+                <div>Email</div>
+                <input type="text" id="email"/>
+            </div>
+            <div class="error" id="email-error"></div>
+            <div class="modal-number">
+                <div>Tel.Number</div>
+                <input type="text" id="number"/>
+            </div>
+            <div class="error" id="number-error"></div>
+        </div>
+        <div class="modal-line"></div>
+        <div class="modal-footer">
+            <div class="modal-button">Buy</div>
         </div>
     </div>
+</div>
 
-    <div id="search-menu" class="modal search-menu">
-        <div class="modal-content">
-            <div class="modal-head">
-                <div class="modal-found"></div>
-            </div>
-            <div class="modal-body">
-                
-            </div>
+<div id="search-menu" class="modal search-menu">
+    <div class="modal-content">
+        <div class="modal-head">
+            <div class="modal-found"></div>
+        </div>
+        <div class="modal-body">
+
         </div>
     </div>
+</div>
 
-    <div class="main ">
-<!--        <div class="menu">-->
-<!--            <div><a href="#"><img src="../static/img/logo.png" class="logo"/></a></div>-->
-<!--            <div class="search_bar">-->
-<!--                <label>-->
-<!--                <i class="fa-solid fa-magnifying-glass"></i>-->
-<!--                <input type="search" placeholder="Search..." id="find_field"/>-->
-<!--                </label>-->
-<!--            </div>-->
+<div class="main ">
+    <!--        <div class="menu">-->
+    <!--            <div><a href="#"><img src="../static/img/logo.png" class="logo"/></a></div>-->
+    <!--            <div class="search_bar">-->
+    <!--                <label>-->
+    <!--                <i class="fa-solid fa-magnifying-glass"></i>-->
+    <!--                <input type="search" placeholder="Search..." id="find_field"/>-->
+    <!--                </label>-->
+    <!--            </div>-->
 
-<!--            <div class="icons">-->
-<!--                <a class = "cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>-->
-<!--                <a class = "location" href="#"><i class="fa-solid fa-location-dot"></i></a>-->
-<!--            </div>-->
-<!--        </div>-->
+    <!--            <div class="icons">-->
+    <!--                <a class = "cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>-->
+    <!--                <a class = "location" href="#"><i class="fa-solid fa-location-dot"></i></a>-->
+    <!--            </div>-->
+    <!--        </div>-->
 
 
-        <!-- HEADER  -->
+    <!-- HEADER  -->
 
-        <header class="header menu">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="#" class="nav__logo">
-                        <img src="../static/img/logo.png" class="logo"/>
-                    </a>
+    <header class="header menu">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="#" class="nav__logo">
+                    <img src="../static/img/logo.png" class="logo"/>
+                </a>
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line nav__toggle-menu"></i>
-                        <i class="ri-close-line nav__toggle-close"></i>
-                    </div>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-
-                        <!-- DROPDOWN 1 -->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Guitars <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Brand</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Jackson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Gibson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Fender</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Shape</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Flying V</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Les Paul</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Stratacater</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Category</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">6 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">7 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">8 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">9 String</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- DROPDOWN 2 -->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Basses <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Brand</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Jackson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Gibson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Fender</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Shape</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Flying V</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Les Paul</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Stratacater</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Category</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">6 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">7 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">8 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">9 String</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- DROPDOWN 2 -->
-                        <li class="dropdown__item">
-                            <div class="nav__link dropdown__button">
-                                Accessories <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Brand</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Jackson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Gibson</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Fender</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Shape</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">Flying V</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Les Paul</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">Stratacater</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="dropdown__group">
-
-                                        <span class="dropdown__title">Shop By Category</span>
-
-                                        <ul class="dropdown__list">
-                                            <li>
-                                                <a href="#" class="dropdown__link">6 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">7 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">8 String</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown__link">9 String</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Header Ends here -->
-    
-        <div class="upper">
-            <div class="slidere">
-                <div class="slide">
-                    <img src="../static/img/slider2.jpg"/>
-                    <a href="#"><div class="shop-button">SHOP NOW</div></a>
-                </div>
-                <div class="slide">
-                    <img src="../static/img/slider1.jpg"/>
-                    <div class="slide-text">
-                        <div class="slide-head">PRO   SERIES</div> 
-                        <div class="slide-p">
-                            SIGNATURE JOSH SMITH
-                            <br>
-                            SOLOIST™ SL7 ET
-                        </div>
-                    </div>
-                    <a href="#"><div class="shop-button">SHOP NOW</div></a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__toggle-menu"></i>
+                    <i class="ri-close-line nav__toggle-close"></i>
                 </div>
             </div>
-        
-            <div class="cont">
-                <div class="companies">
-                    <div class="companies-head">FEATURED BRANDS</div>
-                    <div class="brands">
-                        <a><img class="gibson" src="../static/img/gibson.png"/></a>
-                        <a><img class="fender" src="../static/img/fender.png"/></a>
-                        <a><img class="jackson" src="../static/img/jackson.png"/></a>
-                        <a><div class="ibanez-d"><img class="ibanez" src="../static/img/ibanez.png"/></div></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <!-- DROPDOWN 1 -->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Guitars <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Brand</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Jackson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Gibson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Fender</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Shape</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Flying V</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Les Paul</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Stratacater</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Category</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">6 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">7 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">8 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">9 String</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- DROPDOWN 2 -->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Basses <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Brand</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Jackson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Gibson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Fender</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Shape</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Flying V</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Les Paul</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Stratacater</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Category</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">6 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">7 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">8 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">9 String</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- DROPDOWN 2 -->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Accessories <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Brand</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Jackson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Gibson</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Fender</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Shape</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Flying V</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Les Paul</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Stratacater</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+
+                                    <span class="dropdown__title">Shop By Category</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">6 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">7 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">8 String</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">9 String</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header Ends here -->
+
+    <!-- Slider Starts Here -->
+
+    <div class="upper">
+        <div class="slidere">
+            <div class="slide">
+                <img src="../static/img/slider2.jpg"/>
+                <a href="#">
+                    <div class="shop-button">SHOP NOW</div>
+                </a>
+            </div>
+            <div class="slide">
+                <img src="../static/img/slider1.jpg"/>
+                <div class="slide-text">
+                    <div class="slide-head">PRO SERIES</div>
+                    <div class="slide-p">
+                        SIGNATURE JOSH SMITH
+                        <br>
+                        SOLOIST™ SL7 ET
                     </div>
                 </div>
-                <div class="metal">
-                    <div class="guitars-text">MODERN</div>
-                    <div class="big-line"></div>
-                    <div class="guitars slider">
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/ibanez-axe.png"/>
-                                <div>
-                                    <div class="name">Ibanez RG Axe Design Lab</div>
-                                    <div class="line"></div>
-                                    <div class="price">1 186.62 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/ibanez-standart-blue.png"/>
-                                <div>
-                                    <div class="name">Ibanez<br/>Q Standard</div>
-                                    <div class="line"></div>
-                                    <div class="price">999.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/jackson-soloist-orange.png"/>
-                                <div>
-                                    <div class="name">X Series Soloist™ SL3X DX</div>
-                                    <div class="line"></div>
-                                    <div class="price">849.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar rr" src="guitars/rr3-white.png"/>
-                                <div>
-                                    <div class="name">Jackson<br/>RR-3</div>
-                                    <div class="line"></div>
-                                    <div class="price">1 299.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/schecter-aaron.png "/>
-                                <div>
-                                    <div class="name">Schecter Aaron Marshall AM-6</div>
-                                    <div class="line"></div>
-                                    <div class="price">1 689.06 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/RGDMS8_CSM_1P_01.png"/>
-                                <div>
-                                    <div class="name">Ibanez<br/>RGDMS8</div>
-                                    <div class="line"></div>
-                                    <div class="price">727.12 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="buttons">
-                        <div class="button-left">LEFT</div>
-                        <div class="button-right">RIGHT</div>
-                    </div>
-                </div>
-
-                <div class="classic">
-                    <div class="guitars-text">CLASSIC VIBES</div>
-                    <div class="big-line"></div>
-                    <div class="guitars slider">
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/les_paul.png"/>
-                                <div>
-                                    <div class="name">Les Paul<br>70s Deluxe</div>
-                                    <div class="line"></div>
-                                    <div class="price">2 807.00 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/telecaster.png"/>
-                                <div>
-                                    <div class="name">VINTAGE II 1951 TELECASTER</div>
-                                    <div class="line"></div>
-                                    <div class="price">2 249.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar rr" src="guitars/telecater-blue.png"/>
-                                <div>
-                                    <div class="name">AMERICAN ULTRA TELECASTER</div>
-                                    <div class="line"></div>
-                                    <div class="price">2 149.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/schecter-lespaul.png"/>
-                                <div>
-                                    <div class="name">Solo II<br>Custom LH</div>
-                                    <div class="line"></div>
-                                    <div class="price">1 049.00 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/mustang.png "/>
-                                <div>
-                                    <div class="name">VINTERA '60S MUSTANG</div>
-                                    <div class="line"></div>
-                                    <div class="price">1 099.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="guitars/stratocaster.png"/>
-                                <div>
-                                    <div class="name">STRATOCASTER HSS</div>
-                                    <div class="line"></div>
-                                    <div class="price">879.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="buttons">
-                        <div class="button-left">LEFT</div>
-                        <div class="button-right">RIGHT</div>
-                    </div>
-                </div>
-                <div class="stomps">
-                    <div class="guitars-text">STOMP BOXES</div>
-                    <div class="big-line"></div>
-                    <div class="guitars slider">
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="stomps/bigmuff.png"/>
-                                <div>
-                                    <div class="name">Big Muff Pi Classic</div>
-                                    <div class="line"></div>
-                                    <div class="price">128.19 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="stomps/ds1.png"/>
-                                <div>
-                                    <div class="name"> Boss DS-1</div>
-                                    <div class="line"></div>
-                                    <div class="price">62.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar rr" src="stomps/delay.png"/>
-                                <div>
-                                    <div class="name">Boss DD-3T</div>
-                                    <div class="line"></div>
-                                    <div class="price">164.19 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="stomps/fuzzface.png"/>
-                                <div>
-                                    <div class="name">Dunlop Fuzz Face</div>
-                                    <div class="line"></div>
-                                    <div class="price">169.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="model">
-                            <div class="all">
-                                <img class="guitar" src="stomps/tubescreamer.png"/>
-                                <div>
-                                    <div class="name">TS9DX</div>
-                                    <div class="line"></div>
-                                    <div class="price">119.99 $</div>
-                                    <div class="buy">Add To Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="buttons">
-                        <div class="button-left">LEFT</div>
-                        <div class="button-right">RIGHT</div>
-                    </div>
-                </div>
+                <a href="#">
+                    <div class="shop-button">SHOP NOW</div>
+                </a>
             </div>
         </div>
     </div>
 
+    <!-- Slider Ends Here -->
 
-    <script src="../static/js/jq.js"></script>
-    <script src="../static/js/slider.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="../static/js/animation.js"></script>
-    <script src="../static/js/scroll.js"></script>
-    <script src="../static/js/cart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script src="../static/js/navbar.js"></script>
+    <!-- Page Main Content Starts Here -->
+
+    <div class="cont">
+
+        <!-- Featured Items Starts Here -->
+
+        <div class="carousel">
+            <div class="guitars-text">CLASSIC VIBES</div>
+                <div class="big-line"></div>
+            <div class="guitars slider">
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/les_paul.png"/>
+                        <div class="info">
+                            <div class="name">Les Paul 70s Deluxe</div>
+                            <div class="line"></div>
+                            <div class="price">2 807.00 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/telecaster.png"/>
+                        <div class="info">
+                            <div class="name">VINTAGE II 1951 TELECASTER</div>
+                            <div class="line"></div>
+                            <div class="price">2 249.99 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/telecater-blue.png"/>
+                        <div class="info">
+                            <div class="name">AMERICAN ULTRA TELECASTER</div>
+                            <div class="line"></div>
+                            <div class="price">2 149.99 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/schecter-lespaul.png"/>
+                        <div class="info">
+                            <div class="name">Solo II Custom LH</div>
+                            <div class="line"></div>
+                            <div class="price">1 049.00 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/mustang.png "/>
+                        <div class="info">
+                            <div class="name">VINTERA '60S MUSTANG</div>
+                            <div class="line"></div>
+                            <div class="price">1 099.99 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="all">
+                        <img class="guitar" src="guitars/stratocaster.png"/>
+                        <div class="info">
+                            <div class="name">STRATOCASTER HSS</div>
+                            <div class="line"></div>
+                            <div class="price">879.99 $</div>
+                            <div class="buy">Add To Cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div class="button-left">LEFT</div>
+                <div class="button-right">RIGHT</div>
+            </div>
+        </div>
+
+        <!-- Featured Items Ends Here -->
+
+    </div>
+
+    <!-- Page Main Content Ends Here -->
+
+</div>
+
+
+<script src="../static/js/jq.js"></script>
+<script src="../static/js/slider.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../static/js/animation.js"></script>
+<script src="../static/js/scroll.js"></script>
+<script src="../static/js/cart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script src="../static/js/navbar.js"></script>
 </body>
 
 <footer>
@@ -594,9 +469,12 @@
             </div>
             <div class="big-line"></div>
             <div class="icon">
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl" style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"
+                                                                        style="color: #ffffff;"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"
+                                                                       style="color: #ffffff;"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"
+                                                                      style="color: #ffffff;"></i></a>
             </div>
         </div>
     </div>

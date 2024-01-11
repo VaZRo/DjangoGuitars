@@ -25,10 +25,6 @@
     transform: translateY(-100%);
 }
 
-.logo{
-    width: 70px;
-    filter: grayscale(1);
-}
 
 a{
     text-decoration: none;
@@ -135,9 +131,9 @@ label {
     color: black;
 }
 
-.cont{
-    padding: 0px 100px;
-}
+/*.cont{*/
+/*    padding: 0px 0px;*/
+/*}*/
 
 .brands{
     display: flex;
@@ -175,7 +171,7 @@ label {
     padding: 20px 0px
 }
 
-.metal, .classic{
+.carousel{
     padding: 30px 0px;
 }
 
@@ -187,7 +183,7 @@ label {
 }
 
 .big-line{
-    width: 900px;
+    width: 50%;
     height: 2px;
     background-color: black;
     margin: 30px auto;
@@ -216,7 +212,11 @@ label {
 .all{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.info{
+    text-align: left   ;
 }
 
 .model.invisible{
@@ -439,6 +439,8 @@ label {
 
 .logo{
     margin: 0 31px;
+    width: 14%;
+    filter: grayscale(1);
 }
 
 .footer-text{
