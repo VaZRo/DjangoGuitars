@@ -438,7 +438,6 @@ label {
 }
 
 .logo{
-    margin: 0 31px;
     width: 14%;
     filter: grayscale(1);
 }
@@ -467,4 +466,10 @@ label {
 
 .icon i{
     padding: 0px 10px;
+}
+
+@media screen and (max-width: 1150px) {
+  .menu.sticky {
+    transform: none !important;
+}
 }
