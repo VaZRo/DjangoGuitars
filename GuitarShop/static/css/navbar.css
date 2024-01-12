@@ -13,6 +13,7 @@
   --body-color: hsl(0, 0%, 0%);
   --container-color: hsl(230, 100%, 97%);
   --border-color: hsl(230, 25%, 80%);
+  --background-color: #e0e0e0;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -57,7 +58,7 @@ button {
 }
 
 body {
-  background-color: white;
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
