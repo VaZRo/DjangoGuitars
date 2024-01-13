@@ -500,6 +500,33 @@ label {
     background-color: #e0e0e0;
     z-index: 101;
     overflow: auto;
+    user-select: none;
+}
+.filter-options{
+    display: none;
+}
+
+.filter-options.active{
+    display: block;
+}
+
+.filter-name{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#filter{
+    justify-content: center;
+}
+
+.filter-options > ul > li{
+    margin-bottom: 5px;
 }
 
 
@@ -512,6 +539,16 @@ label {
         display: none !important;
     }
     .filters-mobile{
-        display: flex;
+        display: block;
+    }
+
+    .filter-options{
+        padding-left: 20px;
+        margin: 5px 0px;
+        font-size: 15px;
+    }
+
+    .filter-name{
+        border-bottom: 0.5px black solid;
     }
 }
