@@ -16,28 +16,19 @@
 /*    z-index: 1;*/
 /*}*/
 
-:root{
+:root {
     --background-color: #e0e0e0;
     --second-color: black;
     --text-color: black;
 }
 
-/*.menu{*/
-/*    transition: transform 0.2s ease-in-out;*/
-/*    background-color: var(--background-color);*/
-/*}*/
 
-/*.menu.sticky {*/
-/*    transform: translateY(-100%);*/
-/*}*/
-
-
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-#find_field{
+#find_field {
     width: 500px;
     height: 30px;
     border-radius: 20px;
@@ -58,21 +49,21 @@ label {
     position: relative;
 }
 
-#find_field{
+#find_field {
     padding-left: 30px;
 }
 
-.cart, .location{
+.cart, .location {
     padding: 0px 10px;
 }
 
-.upper{
+.upper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.slidere{
+.slidere {
     position: relative;
     width: 100%;
     height: 580px;
@@ -80,12 +71,13 @@ label {
 }
 
 .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
-.slide.active{
+
+.slide.active {
     opacity: 1;
 }
 
@@ -95,36 +87,36 @@ label {
     object-fit: cover;
 }
 
-.slide-text{
+.slide-text {
     position: absolute;
     bottom: 40%;
     left: 30px;
     color: white;
 }
 
-.slide-head{
+.slide-head {
     font-size: 1rem;
     letter-spacing: 0.4em;
-    font-family: Palanquin ,sans-serif;
+    font-family: Palanquin, sans-serif;
     padding-bottom: 10px;
     margin-left: 3px;
 }
 
-.slide-p{
+.slide-p {
     font-size: 3em;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     padding-bottom: 10px;
 }
 
-.shop-button{
+.shop-button {
     position: absolute;
     bottom: 28%;
     left: 30px;
     height: 50px;
     width: 100px;
     transition: background-color 0.3s ease-in-out;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     border: white 0.5px solid;
     display: flex;
@@ -132,12 +124,12 @@ label {
     justify-content: center;
 }
 
-.shop-button:hover{
+.shop-button:hover {
     background-color: white;
     color: black;
 }
 
-.brands{
+.brands {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -147,62 +139,62 @@ label {
     height: auto;
 }
 
-.ibanez, .fender, .gibson{
+.ibanez, .fender, .gibson {
     width: 300px;
 }
 
-.ibanez-d{
+.ibanez-d {
     display: flex;
     align-items: center;
     height: 300px;
 }
 
-.jackson{
+.jackson {
     width: 400px;
 }
 
-.fender, .gibson, .jackson, .ibanez-d{
+.fender, .gibson, .jackson, .ibanez-d {
     padding: 10px;
 }
 
-.companies-head{
-    font-family: Palanquin Dark ,sans-serif;
+.companies-head {
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bolder;
     font-size: 3em;
     text-align: center;
     padding: 20px 0px
 }
 
-.carousel{
+.carousel {
     padding: 30px 0px;
 }
 
-.guitars-text{
-    font-family: Palanquin Dark ,sans-serif;
+.guitars-text {
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bolder;
     font-size: 3em;
     text-align: center;
 }
 
-.big-line{
+.big-line {
     width: 50%;
     height: 2px;
     background-color: black;
     margin: 30px auto;
-    
+
 }
 
-.guitars{
+.guitars {
     margin: 10px auto;
     max-width: 1300px;
 }
 
-.guitar{
+.guitar {
     width: 200px;
     height: 600px;
 }
 
-.stomps .guitar{
+.stomps .guitar {
     height: 200px;
     width: auto;
 }
@@ -211,46 +203,46 @@ label {
     margin: 0 1.5%;
 }
 
-.all{
+.all {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.info{
-    text-align: left   ;
+.info {
+    text-align: left;
 }
 
-.model.invisible{
-    display: none;   
+.model.invisible {
+    display: none;
 }
 
-.name{
+.name {
     padding-top: 50px;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.line{
+.line {
     width: 100px;
     height: 1px;
     background-color: black;
     margin: 10px 0px;
 }
 
-.price{
-    font-family: Palanquin Dark ,sans-serif;
+.price {
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     font-size: 1em;
 }
 
-.buy{
+.buy {
     margin: 10px 0px;
     width: 100px;
     height: 30px;
     border: 1.5px solid black;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bolder;
     font-size: 1em;
     display: flex;
@@ -259,22 +251,22 @@ label {
     transition: background-color 0.3s ease-in-out;
 }
 
-.buy:hover{
+.buy:hover {
     background-color: black;
     color: white;
 }
 
-.buttons{
+.buttons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button-left, .button-right{
+.button-left, .button-right {
     height: 50px;
     width: 100px;
     transition: background-color 0.3s ease-in-out;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     border: black 0.5px solid;
     display: flex;
@@ -283,36 +275,36 @@ label {
     margin: 20px 20px;
 }
 
-.button-left:hover, .button-right:hover{
+.button-left:hover, .button-right:hover {
     background-color: black;
     color: white;
 }
 
-.modal.cart-menu{
+.modal.cart-menu {
     max-width: 800px;
     width: 800px;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
 }
 
-.modal-content{
+.modal-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.modal-line{
+.modal-line {
     height: 1px;
     width: 500px;
     background-color: black;
     margin: 10px 0px;
 }
 
-.modal-button{
+.modal-button {
     height: 50px;
     width: 100px;
     transition: background-color 0.3s ease-in-out;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     border: black 0.5px solid;
     display: flex;
@@ -320,16 +312,16 @@ label {
     justify-content: center;
 }
 
-.modal-button.invisible{
+.modal-button.invisible {
     display: none;
 }
 
-.modal-button:hover{
+.modal-button:hover {
     background-color: black;
     color: white;
 }
 
-.pos{
+.pos {
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -339,13 +331,13 @@ label {
     margin: 15px 0px;
 }
 
-.pos-left img{
+.pos-left img {
     transform: rotate(90deg);
     width: auto;
     height: 110px;
 }
 
-.ava-div{
+.ava-div {
     width: 200px;
     height: 100px;
     display: flex;
@@ -354,13 +346,13 @@ label {
     border-right: 1.5px black solid;
 }
 
-.pos-left{
+.pos-left {
     display: flex;
     width: 92%;
     border-right: 1.5px black solid;
 }
 
-.pos-text{
+.pos-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,7 +360,7 @@ label {
     padding-left: 10px;
 }
 
-.pos-delete{
+.pos-delete {
     width: 70px;
     height: 100px;
     display: flex;
@@ -377,52 +369,52 @@ label {
     transition: background-color 0.3s ease-in-out;
 }
 
-.pos-delete:hover{
+.pos-delete:hover {
     background-color: rgb(155, 52, 52);
 }
 
-.modal.cart-buy{
+.modal.cart-buy {
     max-width: 800px;
     width: 800px;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
 }
 
-.modal.cart-buy .modal-body{
+.modal.cart-buy .modal-body {
     display: flex;
     flex-direction: column;
     width: 500px;
 }
 
-.modal-name, .modal-surname, .modal-email, .modal-number, .modal-address{
+.modal-name, .modal-surname, .modal-email, .modal-number, .modal-address {
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
 }
 
-#name, #surname, #email, #address, #number{
+#name, #surname, #email, #address, #number {
     width: 300px;
     height: 20px;
 }
 
-.error{
+.error {
     height: 10px;
     color: red;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     padding: 5px 0px;
     display: flex;
     align-items: center;
 }
 
-.modal.search-buy{
+.modal.search-buy {
     max-width: 800px;
     width: 800px;
-    font-family: Palanquin Dark ,sans-serif;
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
 }
 
 
-.middle{
+.middle {
     display: flex;
     background-color: rgb(49, 49, 49);
     height: 300px;
@@ -430,7 +422,7 @@ label {
     justify-content: center;
 }
 
-.logo-line{
+.logo-line {
     display: flex;
     height: 70px;
     flex-direction: row;
@@ -439,20 +431,20 @@ label {
     justify-content: center;
 }
 
-.logo{
+.logo {
     width: 14%;
     filter: grayscale(1);
 }
 
-.footer-text{
-    font-family: Palanquin Dark ,sans-serif;
+.footer-text {
+    font-family: Palanquin Dark, sans-serif;
     font-weight: bold;
     font-size: 2em;
     color: white;
 }
 
-.down{
-    font-family: Palanquin Dark ,sans-serif;
+.down {
+    font-family: Palanquin Dark, sans-serif;
     color: white;
     display: flex;
     background-color: black;
@@ -461,39 +453,38 @@ label {
     justify-content: center;
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center;
 }
 
-.icon i{
+.icon i {
     padding: 0px 10px;
 }
 
 
-.inteface{
+.interface {
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 100px;
-    display:flex;
+    display: flex;
     justify-content: center;
     width: 80%;
 }
 
-.products{
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.filters{
+.filters {
     height: 1000px;
     width: 300px;
     background-color: black;
 }
 
-.filters-mobile{
-    display: none;
+.filters-mobile {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -501,32 +492,93 @@ label {
     z-index: 101;
     overflow: auto;
     user-select: none;
+    top: 0;
+    left: 100%; /* Начальное положение за пределами экрана слева */
+    transition: left 0.3s ease;
 }
-.filter-options{
+
+.filters-mobile.active{
+    left: 0;
+}
+
+.filter-options {
     display: none;
 }
 
-.filter-options.active{
+.filter-options.active {
     display: block;
 }
 
-.filter-name{
+.filter-name {
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
     height: 40px;
     cursor: pointer;
-    padding-left: 20px;
-    font-size: 15px;
+    padding: 0px 20px;
+    font-size: 13px;
     font-weight: bold;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-#filter{
+#filter {
     justify-content: center;
 }
 
-.filter-options > ul > li{
+.filter-options > ul > li {
     margin-bottom: 5px;
+    font-size: 13pt;
+}
+
+.filter-head {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0px 20px;
+    font-weight: bold;
+    border-bottom: 1.5px black solid;
+    font-size: 11pt;
+}
+
+.filter-options ul li {
+    display: flex;
+    align-items: center;
+}
+
+.filter-options input[type="checkbox"] {
+    display: none;
+}
+
+.filter-options input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-options input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    border-radius: 0px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.filter-options input[type="checkbox"]:checked + label::before {
+    background-color: #000;
+    border-color: #000000;
+}
+
+.mobile-filter-button{
+    display: none;
 }
 
 
@@ -538,17 +590,48 @@ label {
     .filters {
         display: none !important;
     }
-    .filters-mobile{
-        display: block;
-    }
 
-    .filter-options{
+    .filter-options {
         padding-left: 20px;
         margin: 5px 0px;
         font-size: 15px;
     }
 
-    .filter-name{
-        border-bottom: 0.5px black solid;
+    .filter-name {
+        border-bottom: 1.5px black solid;
+    }
+
+    .show-icon {
+        font-size: 17pt;
+    }
+
+    .filter-name {
+        font-size: 13pt;
+    }
+
+    .filter-sign {
+        text-align: center;
+        display: inline-block !important;
+        flex-grow: 1;
+    }
+
+    .close-icon {
+        margin-left: auto;
+        font-size: 15pt;
+    }
+
+    .interface{
+        flex-direction: column;
+    }
+
+    .mobile-filter-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0px;
+        padding: 10px 0px;
+        border-top: black 2px solid;
+        border-bottom: black 2px solid;
+        font-weight: bold;
     }
 }

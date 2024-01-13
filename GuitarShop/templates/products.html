@@ -88,20 +88,6 @@
 </div>
 
 <div class="main_page">
-    <!--        <div class="menu">-->
-    <!--            <div><a href="#"><img src="../static/img/logo.png" class="logo"/></a></div>-->
-    <!--            <div class="search_bar">-->
-    <!--                <label>-->
-    <!--                <i class="fa-solid fa-magnifying-glass"></i>-->
-    <!--                <input type="search" placeholder="Search..." id="find_field"/>-->
-    <!--                </label>-->
-    <!--            </div>-->
-
-    <!--            <div class="icons">-->
-    <!--                <a class = "cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>-->
-    <!--                <a class = "location" href="#"><i class="fa-solid fa-location-dot"></i></a>-->
-    <!--            </div>-->
-    <!--        </div>-->
 
 
     <!-- HEADER  -->
@@ -160,25 +146,36 @@
     <div class="filters-mobile">
         <form method="POST">
             <div>
-                <div class="filter-name" id="filter">FILTER</div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">BRAND</div>
-                    <div class="filter-options">
-                        <ul>
-                        <li>Gibson</li>
-                        <li>Fender</li>
-                        <li>Jackson</li>
-                    </ul>
+                <div class="filter-head">
+                    <div class="filter-sign">FILTER</div>
+                    <div class="close-icon">
+                        <i class="ri-close-line"></i>
                     </div>
                 </div>
                 <div class="filter-section">
-                    <div class="filter-name toggle-button">SHAPE</div>
+                    <div class="filter-name toggle-button">
+                        <p>BRAND</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
                     <div class="filter-options">
                         <ul>
-                        <li>Les Paul</li>
-                        <li>Stratocater</li>
-                        <li>Telecater</li>
-                    </ul>
+                            <li><input type="checkbox" id="checkbox1"><label for="checkbox1">Gibson</label></li>
+                            <li><input type="checkbox" id="checkbox2"><label for="checkbox2">Fender</label></li>
+                            <li><input type="checkbox" id="checkbox3"><label for="checkbox3">Jackson</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-name toggle-button">
+                        <p>SHAPE</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
+                    <div class="filter-options">
+                        <ul>
+                            <li><input type="checkbox" id="checkbox4"><label for="checkbox1">Les Paul</label></li>
+                            <li><input type="checkbox" id="checkbox5"><label for="checkbox2">Stratocater</label></li>
+                            <li><input type="checkbox" id="checkbox6"><label for="checkbox3">Telecater</label></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -187,9 +184,13 @@
     </div>
 
 
-    <div class="inteface">
+    <div class="interface">
 
         <!-- Products Section Starts Here -->
+
+        <div class="mobile-filter-button">
+            FILTER
+        </div>
 
         <div class="filters">
 
