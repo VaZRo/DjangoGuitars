@@ -23,4 +23,14 @@ $(document).ready(function () {
         console.log('Filter Mobile:', filterMobile.length);
         filterMobile.addClass('active');
     });
+
+    let form = document.getElementById("filterForm");
+
+    form.addEventListener("change", function (event) {
+        // Проверяем, является ли цель события checkbox
+        if (event.target.type === "checkbox") {
+            // Отправляем форму
+            form.submit();
+        }
+    });
 });
