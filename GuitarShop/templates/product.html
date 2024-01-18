@@ -1,152 +1,15 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css"
-          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <title>Project</title>
-    <link rel="icon" type="image/png" href="../static/img/logo.png">
-</head>
-
-<body>
-
-<div id="cart-menu" class="modal cart-menu">
-    <div class="modal-content">
-        <div class="modal-head">SHOPING CART</div>
-        <div class="modal-line"></div>
-        <div class="modal-body">
-            <div class="modal-empty"></div>
-        </div>
-        <div class="modal-line"></div>
-        <div class="modal-footer">
-            <div class="modal-button">Buy</div>
-        </div>
-    </div>
-</div>
-
-<div id="cart-buy" class="modal cart-buy">
-    <div class="modal-content">
-        <div class="modal-head">
-            <div class="modal-pos"></div>
-            <div class="modal-price"></div>
-        </div>
-        <div class="modal-line"></div>
-        <div class="modal-body">
-            <div class="modal-name">
-                <div>First Name</div>
-                <input type="text" id="name"/>
-            </div>
-            <div class="error" id="name-error"></div>
-            <div class="modal-surname">
-                <div>Last Name</div>
-                <input type="text" id="surname"/>
-            </div>
-            <div class="error" id="surname-error"></div>
-            <div class="modal-address">
-                <div>Addres</div>
-                <input type="text" id="address"/>
-            </div>
-            <div class="error" id="address-error"></div>
-            <div class="modal-email">
-                <div>Email</div>
-                <input type="text" id="email"/>
-            </div>
-            <div class="error" id="email-error"></div>
-            <div class="modal-number">
-                <div>Tel.Number</div>
-                <input type="text" id="number"/>
-            </div>
-            <div class="error" id="number-error"></div>
-        </div>
-        <div class="modal-line"></div>
-        <div class="modal-footer">
-            <div class="modal-button">Buy</div>
-        </div>
-    </div>
-</div>
-
-<div id="search-menu" class="modal search-menu">
-    <div class="modal-content">
-        <div class="modal-head">
-            <div class="modal-found"></div>
-        </div>
-        <div class="modal-body">
-
-        </div>
-    </div>
-</div>
-
-<div class="main_page">
+{% extends 'layout/base.html' %}
+{% load static %}
 
 
-    <!-- HEADER  -->
-
-    <header class="header menu" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo"><img src="../static/img/logo.png" class="logo"/></a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/" class="nav__link">Home</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="/products" class="nav__link">Shop</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About Us</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact
-                            <Us></Us>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
-
-            <div class="nav__actions">
-                <!-- Search button -->
-                <i class="ri-search-line nav__search" id="search-btn"></i>
-
-                <!-- Login button -->
-                <i class="ri-user-line nav__login" id="login-btn"></i>
-
-                <!-- Toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Header Ends here -->
+{% block content %}
 
 
-
-    <div class="interface">
+<div class="interface">
 
         <div class="product-details">
             <div class="image-price-container">
-                <img src="../static/img/jackson-soloist-orange.png" class="product-image"/>
+                <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image"/>
                 <div class="info-container">
                     <div class="product-name">PRODUCT NAME</div>
                     <div class="product-price">100.00$</div>
@@ -163,36 +26,5 @@
 
     </div>
 
-</div>
-    <script src="../static/js/jq.js"></script>
-    <script src="../static/js/slider.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="../static/js/animation.js"></script>
-    <script src="../static/js/scroll.js"></script>
-    <script src="../static/js/cart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <script src="../static/js/navbar.js"></script>
-</body>
 
-<footer>
-    <div class="middle">
-        <div class="cont">
-            <div class="big-line"></div>
-            <div class="logo-line">
-                <img src="../static/img/logo.png" class="logo"/>
-                <div class="footer-text">BUY YOUR SOUND</div>
-            </div>
-            <div class="big-line"></div>
-            <div class="icon">
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"
-                                                                        style="color: #ffffff;"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"
-                                                                       style="color: #ffffff;"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"
-                                                                      style="color: #ffffff;"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="down"> Guitar Shop©2023.All rights reserved</div>
-</footer>
-</html>
+{% endblock %}
