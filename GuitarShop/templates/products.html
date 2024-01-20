@@ -7,7 +7,8 @@
 <!-- Page Main Content Starts Here -->
 
     <div class="filters-mobile">
-        <form method="POST">
+        <form method="POST" id="filterForm">
+            {% csrf_token %}
             <div>
                 <div class="filter-head">
                     <div class="filter-sign">FILTER</div>
@@ -22,27 +23,56 @@
                     </div>
                     <div class="filter-options">
                         <ul>
-                            <li><input type="checkbox" id="checkbox1"><label for="checkbox1">Gibson</label></li>
-                            <li><input type="checkbox" id="checkbox2"><label for="checkbox2">Fender</label></li>
-                            <li><input type="checkbox" id="checkbox3"><label for="checkbox3">Jackson</label></li>
+                            {% for brand in brands %}
+                            <li><input type="checkbox" id="brandMobilePk-{{brand.pk}}" name="brandPk-{{ brand.pk }}"><label for="brandMobilePk-{{brand.pk}}">{{ brand }}</label></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="filter-section">
                     <div class="filter-name toggle-button">
-                        <p>SHAPE</p>
+                        <p>Type</p>
                         <i class="ri-add-line show-icon"></i>
                     </div>
                     <div class="filter-options">
                         <ul>
-                            <li><input type="checkbox" id="checkbox4"><label for="checkbox4">Les Paul</label></li>
-                            <li><input type="checkbox" id="checkbox5"><label for="checkbox5">Stratocater</label></li>
-                            <li><input type="checkbox" id="checkbox6"><label for="checkbox6">Telecater</label></li>
+                            {% for type in types %}
+                            <li><input type="checkbox" id="typeMobilePk-{{type.pk}}" name="typePk-{{ type.pk }}"><label for="typeMobilePk-{{type.pk}}">{{ type }}</label></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
+                <div class="filter-section">
+                    <div class="filter-name toggle-button">
+                        <p>Color</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
+                    <div class="filter-options">
+                        <ul>
+                            {% for color in colors %}
+                            <li><input type="checkbox" id="colorMobilePk-{{color.pk}}" name="colorPk-{{ color.pk }}"><label for="colorMobilePk-{{color.pk}}">{{ color }}</label></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-name toggle-button">
+                        <p>Category</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
+                    <div class="filter-options">
+                        <ul>
+                            {% for category in categories %}
+                            <li><input type="checkbox" id="categoryMobilePk-{{category.pk}}" name="categoryPk-{{ category.pk }}"><label for="categoryPk-{{category.pk}}">{{ category }}</label></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear-button-div">
+                    <button type="button" class="clear-button" id="mobile-clear-button">CLEAR</button>
+                </div>
                 <div class="apply-button-div">
-                    <button type="submit" class="apply-button">APPLY</button>
+                    <button type="button" class="apply-button" id="mobile-apply-button">APPLY</button>
                 </div>
             </div>
         </form>
@@ -59,6 +89,7 @@
 
         <div class="filters">
             <form method="POST" id="filterForm">
+                {% csrf_token %}
                 <div class="filter-head">
                     <div class="filter-sign">FILTER</div>
                     <div class="close-icon">
@@ -71,74 +102,82 @@
                     </div>
                     <div class="filter-options">
                         <ul>
-                            <li><input type="checkbox" id="checkbox7"><label for="checkbox7">Gibson</label></li>
-                            <li><input type="checkbox" id="checkbox8"><label for="checkbox8">Fender</label></li>
-                            <li><input type="checkbox" id="checkbox9"><label for="checkbox9">Jackson</label></li>
+                            {% for brand in brands %}
+                            <li><input type="checkbox" id="brandPk-{{brand.pk}}" name="brandPk-{{ brand.pk }}"><label for="brandPk-{{brand.pk}}">{{ brand }}</label></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="filter-section">
                     <div class="filter-name toggle-button">
-                        <p>SHAPE</p>
+                        <p>TYPE</p>
                         <i class="ri-add-line show-icon"></i>
                     </div>
                     <div class="filter-options">
                         <ul>
-                            <li><input type="checkbox" id="checkbox10"><label for="checkbox10">Les Paul</label></li>
-                            <li><input type="checkbox" id="checkbox11"><label for="checkbox11">Stratocater</label></li>
-                            <li><input type="checkbox" id="checkbox12"><label for="checkbox12">Telecater</label></li>
+                            {% for type in types %}
+                            <li><input type="checkbox" id="typePk-{{type.pk}}" name="typePk-{{ type.pk }}"><label for="typePk-{{type.pk}}">{{ type }}</label></li>
+                            {% endfor %}
                         </ul>
                     </div>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-name toggle-button">
+                        <p>COLOR</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
+                    <div class="filter-options">
+                        <ul>
+                            {% for color in colors %}
+                            <li><input type="checkbox" id="colorPk-{{color.pk}}" name="colorPk-{{ color.pk }}"><label for="colorPk-{{color.pk}}">{{ color }}</label></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-name toggle-button">
+                        <p>CATEGORY</p>
+                        <i class="ri-add-line show-icon"></i>
+                    </div>
+                    <div class="filter-options">
+                        <ul>
+                            {% for category in categories %}
+                            <li><input type="checkbox" id="categoryPk-{{category.pk}}" name="categoryPk-{{ category.pk }}"><label for="categoryPk-{{category.pk}}">{{ category }}</label></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear-button-div">
+                    <button type="button" class="clear-button">CLEAR</button>
+                </div>
+                <div class="apply-button-div">
+                    <button type="button" class="apply-button">APPLY</button>
                 </div>
             </form>
         </div>
 
-        <div class="products">
+        <div class="products" id="product-container">
 
-            <div class="model">
-                <div class="all">
-                    <img class="guitar" src="guitars/les_paul.png"/>
-                    <div class="info">
-                        <div class="name">Les Paul 70s Deluxe</div>
-                        <div class="line"></div>
-                        <div class="price">2 807.00 $</div>
-                        <div class="buy">Add To Cart</div>
-                    </div>
-                </div>
-            </div>
-            <div class="model">
-                <div class="all">
-                    <img class="guitar" src="guitars/les_paul.png"/>
-                    <div class="info">
-                        <div class="name">Les Paul 70s Deluxe</div>
-                        <div class="line"></div>
-                        <div class="price">2 807.00 $</div>
-                        <div class="buy">Add To Cart</div>
-                    </div>
-                </div>
-            </div>
-            <div class="model">
-                <div class="all">
-                    <img class="guitar" src="guitars/les_paul.png"/>
-                    <div class="info">
-                        <div class="name">Les Paul 70s Deluxe</div>
-                        <div class="line"></div>
-                        <div class="price">2 807.00 $</div>
-                        <div class="buy">Add To Cart</div>
-                    </div>
-                </div>
-            </div>
-            <div class="model">
-                <div class="all">
-                    <img class="guitar" src="guitars/les_paul.png"/>
-                    <div class="info">
-                        <div class="name">Les Paul 70s Deluxe</div>
-                        <div class="line"></div>
-                        <div class="price">2 807.00 $</div>
-                        <div class="buy">Add To Cart</div>
-                    </div>
-                </div>
-            </div>
+<!--            {% for prod in prods %}-->
+
+<!--            <div class="model" id="{{ prod.pk }}">-->
+<!--                <div class="all">-->
+<!--                    {% if prod.image %}-->
+<!--                    <a href="{% url 'products:product' prod.pk %}"><img class="guitar" src="{{ prod.image.url }}" alt="{{ prod.name }}"></a>-->
+<!--                    {% else %}-->
+<!--                    <img class="guitar" src="{% static 'img/jaskson-soloist-orange.png' %}" alt="No Image">-->
+<!--                    {% endif %}-->
+
+<!--                    <div class="info">-->
+<!--                        <div class="name">{{ prod.name }}</div>-->
+<!--                        <div class="line"></div>-->
+<!--                        <div class="price">{{ prod.price }} $</div>-->
+<!--                        <div class="buy">Add To Cart</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            {% endfor %}-->
 
         </div>
         <!-- Products Section Ends Here -->

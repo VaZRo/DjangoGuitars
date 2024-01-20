@@ -9,18 +9,22 @@
 
         <div class="product-details">
             <div class="image-price-container">
-                <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image"/>
+                {% if prod.image %}
+                    <img src="{{ prod.image.url }}" class="product-image" alt="{{ prod.name }}"/>
+                {% else %}
+                    <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image" alt="{{ prod.name }}"/>
+                {% endif %}
                 <div class="info-container">
-                    <div class="product-name">PRODUCT NAME</div>
-                    <div class="product-price">100.00$</div>
+                    <div class="product-name">{{ prod.name }}</div>
+                    <div class="product-price">{{ prod.price }} $</div>
                     <div class="add-to-cart">ADD TO CART</div>
                 </div>
 
             </div>
 
 
-            <div class="product-desc">PRODUCT DESCR</div>
-            <div class="product-info">PRODUCT INFO</div>
+            <div class="product-desc">{{ prod.description }}</div>
+<!--            <div class="product-info">PRODUCT INFO</div>-->
 
         </div>
 

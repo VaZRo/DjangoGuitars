@@ -19,18 +19,17 @@ $(document).ready(function () {
 
     $('.mobile-filter-button').click(function (event) {
         let filterMobile = $('.main_page').find('.filters-mobile');
-        console.log('Clicked on mobile-filter-button');
-        console.log('Filter Mobile:', filterMobile.length);
         filterMobile.addClass('active');
     });
 
-    let form = document.getElementById("filterForm");
+    $('#mobile-apply-button').click(function(){
+        let filterMobile = $('.main_page').find('.filters-mobile');
+        filterMobile.removeClass('active');
+    })
 
-    form.addEventListener("change", function (event) {
-        // Проверяем, является ли цель события checkbox
-        if (event.target.type === "checkbox") {
-            // Отправляем форму
-            form.submit();
-        }
-    });
+    $('#mobile-clear-button').click(function(){
+        let filterMobile = $('.main_page').find('.filters-mobile');
+        filterMobile.removeClass('active');
+    })
+
 });
