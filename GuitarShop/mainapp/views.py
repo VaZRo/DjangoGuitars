@@ -27,7 +27,6 @@ def get_data(**kwargs):
 @csrf_protect
 @require_POST
 def get_products(request):
-
     if request.method == 'POST':
         products = Product.objects.all()
         request_data = json.loads(request.body.decode('utf-8'))
@@ -66,58 +65,6 @@ def get_products(request):
                 })
 
             return JsonResponse(product_data, safe=False)
-
-
-    # if request.method == 'POST':
-    #     products = Product.objects.all()
-    #     filter_data = request.POST.get('filterData', None)
-    #
-    #     if filter_data:
-    #         filter_data = json.loads(filter_data)
-    #
-    #         brand_pks = filter_data.get('brandPk', [])
-    #         type_pks = filter_data.get('typePk', [])
-    #         color_pks = filter_data.get('colorPk', [])
-    #         category_pks = filter_data.get('categoryPk', [])
-    #
-    #         if isinstance(brand_pks, list):
-    #             for pk in brand_pks:
-    #                 brand_pk = int(pk)
-    #                 products = products.filter(brand__pk=brand_pk)
-    #
-    #         if isinstance(type_pks, list):
-    #             for pk in type_pks:
-    #                 type_pk = int(pk)
-    #                 products = products.filter(type__pk=type_pk)
-    #
-    #         if isinstance(color_pks, list):
-    #             for pk in color_pks:
-    #                 color_pk = int(pk)
-    #                 products = products.filter(color__pk=color_pk)
-    #
-    #         if isinstance(category_pks, list):
-    #             for pk in category_pks:
-    #                 category_pk = int(pk)
-    #                 products = products.filter(category__pk=category_pk)
-    #
-    #         product_data = []
-    #         for prod in products:
-    #             product_data.append({
-    #                 "pk": prod.pk,
-    #                 "name": prod.name,
-    #                 "price": prod.price,
-    #                 "image": prod.image.url if prod.image else None,
-    #                 "url": reverse('products:product', args=[prod.pk]),
-    #             })
-    #
-    #         # Возвращаем данные в формате JSON
-    #         return JsonResponse(product_data, safe=False)
-    #     else:
-    #         return HttpResponseBadRequest("Invalid filter data")
-    # else:
-    #     # Если запрос не является POST-запросом, возвращаем ошибку
-    #     return HttpResponseBadRequest("Invalid request method")
-
 
 
 def index(request):

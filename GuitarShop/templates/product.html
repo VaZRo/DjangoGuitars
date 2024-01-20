@@ -15,6 +15,7 @@
                     <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image" alt="{{ prod.name }}"/>
                 {% endif %}
                 <div class="info-container">
+                    <div class="product-name">{{ prod.brand }}</div>
                     <div class="product-name">{{ prod.name }}</div>
                     <div class="product-price">{{ prod.price }} $</div>
                     <div class="add-to-cart">ADD TO CART</div>
@@ -24,7 +25,6 @@
 
 
             <div class="product-desc">{{ prod.description }}</div>
-<!--            <div class="product-info">PRODUCT INFO</div>-->
 
         </div>
 
