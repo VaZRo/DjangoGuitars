@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_POST
 from mainapp.models import Category, Brand, Color, Type, Product
+from basketapp.models import Basket
 import json
 
 
@@ -22,6 +23,11 @@ def get_data(**kwargs):
 
     context.update(**kwargs)
     return context
+
+def get_basket(user):
+    if user.is_authenticated:
+        return Basket.objects.filter(user=user)
+    return []
 
 
 @csrf_protect
@@ -62,6 +68,7 @@ def get_products(request):
                     "price": prod.price,
                     "image": prod.image.url if prod.image else None,
                     "url": reverse('products:product', args=[prod.pk]),
+                    "basket_add_url": reverse('basket:add', args=[prod.pk]),
                 })
 
             return JsonResponse(product_data, safe=False)
@@ -69,18 +76,21 @@ def get_products(request):
 
 def index(request):
     prods = Product.objects.all()[:5]
-    context = get_data(prods=prods)
+    basket = get_basket(request.user)
+    context = get_data(prods=prods, basket=basket)
     return render(request, 'index.html', context)
 
 
 def products(request):
     prods = Product.objects.order_by('price')
-    context = get_data(prods=prods)
+    basket = get_basket(request.user)
+    context = get_data(prods=prods, basket=basket)
     return render(request, 'products.html', context)
 
 
 def product(request, pk):
     prod = Product.objects.get(pk=pk)
-    context = get_data(prod=prod)
+    basket = get_basket(request.user)
+    context = get_data(prod=prod, basket=basket)
 
     return render(request, 'product.html', context)

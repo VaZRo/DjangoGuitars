@@ -32,7 +32,9 @@
             <div class="nav__actions">
 
                 {% if user.is_authenticated %}
-                <i class="ri-shopping-cart-line nav__cart"></i>
+                    {% if basket %}
+                        <a href="{% url 'basket:index' %}"><i class="ri-shopping-cart-line nav__cart"></i></a>
+                    {% endif %}
                 <a href="{% url 'auth:edit' %}"><i class="ri-user-line nav__login" id="login-btn"></i></a>
                 <a href="{% url 'auth:logout' %}"><i class="ri-logout-box-r-line nav__logout"></i></a>
 
