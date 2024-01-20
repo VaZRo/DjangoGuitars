@@ -164,7 +164,8 @@ img {
 .nav__search,
 .nav__login,
 .nav__toggle,
-.nav__close {
+.nav__close,
+.nav__logout{
   font-size: 1.25rem;
   color: var(--title-color);
   cursor: pointer;

@@ -1,0 +1,26 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="interface">
+    <div class="login-form">
+
+            <div class="user_avatar">
+                {% if user.avatar %}
+                    <img src ="{{ user.avatar.url }}" alt="User Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
+                  {% endif %}
+            </div>
+            <form id="contact" action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ edit_form.as_p }}
+                <button type="submit" class="btn btn-primary my-4">Edit</button>
+            </form>
+        </div>
+
+</div>
+
+
+{% endblock %}

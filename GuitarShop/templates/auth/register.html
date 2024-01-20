@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="interface">
+
+    <div class="login-form">
+        <div class="product-details">
+            <form id="contact" action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ register_form.as_p }}
+                    <button type="submit" class="btn btn-primary my-4">Register</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
