@@ -10,10 +10,10 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Продукт</th>
-                            <th scope="col">Количество</th>
-                            <th scope="col">Стоимость</th>
-                            <th scope="col">Удалить</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Amout</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Delete</th>
 
                         </tr>
                     </thead>
@@ -25,7 +25,7 @@
                                 <td>
                                     <input type="number" name="{{ item.pk }}" value="{{ item.quantity }}" min="0">
                                 </td>
-                                <td>{{ item.product_cost }}</td>
+                                <td>{{ item.product_cost }} $</td>
                                 <td>
                                 <a class="btn btn-round" href="{% url 'basket:remove' item.pk %}">Удалить</a>
                                 </td>
@@ -35,8 +35,8 @@
                 </table>
                 {% if basket %}
                 <div class="basket_summary mb-5">
-                    В корзине {{ basket.0.total_quantity }}
-                    товаров стоимостью {{ basket.0.total_cost|floatformat:'2g' }} $
+                    In basket {{ basket.0.total_quantity }} Products
+                    Total Price {{ basket.0.total_cost|floatformat:'2g' }} $
                 </div>
             {% endif %}
             </div>

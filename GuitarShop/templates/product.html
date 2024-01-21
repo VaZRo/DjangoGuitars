@@ -18,7 +18,7 @@
                     <div class="product-name">{{ prod.brand }}</div>
                     <div class="product-name">{{ prod.name }}</div>
                     <div class="product-price">{{ prod.price }} $</div>
-                    <div class="add-to-cart">ADD TO CART</div>
+                    <a href="{% url 'basket:add' prod.pk %}"><div class="buy">Add To Cart</div></a>
                 </div>
 
             </div>
