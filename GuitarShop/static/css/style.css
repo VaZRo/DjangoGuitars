@@ -756,48 +756,6 @@ button{
     color: #1e1e1e;
 }
 
-#pre-header .blue-menu{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#pre-header span{
-    padding: 0;
-}
-
-#pre-header .price{
-    display: flex;
-    align-items:center;
-}
-
-#pre-header a{
-    display:flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#pre-header .blue-menu .basket{
-    justify-content: flex-end;
-    align-items: flex-start;
-    background: url("../img/jackson-soloist-orange.png") no-repeat;
-    width: 28px;
-    height: 26px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#pre-header .basket span{
-     width: 16px;
-     height: 16px;
-     font-size: 13px;
-     padding: 0;
-     text-align: center;
-     background-color: #3a8bcd;
-     border-radius: 50%;
-}
-
 .basket_list{
     margin: 100px 0px
 }
