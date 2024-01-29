@@ -18,19 +18,6 @@
                 </div>
                 <div class="filter-section">
                     <div class="filter-name toggle-button">
-                        <p>BRAND</p>
-                        <i class="ri-add-line show-icon"></i>
-                    </div>
-                    <div class="filter-options">
-                        <ul>
-                            {% for brand in brands %}
-                            <li><input type="checkbox" id="brandMobilePk-{{brand.pk}}" name="brandPk-{{ brand.pk }}"><label for="brandMobilePk-{{brand.pk}}">{{ brand }}</label></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">
                         <p>Type</p>
                         <i class="ri-add-line show-icon"></i>
                     </div>
@@ -93,19 +80,6 @@
                 <div class="filter-head">
                     <div class="filter-sign">FILTER</div>
                     <div class="close-icon">
-                    </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">
-                        <p>BRAND</p>
-                        <i class="ri-add-line show-icon"></i>
-                    </div>
-                    <div class="filter-options">
-                        <ul>
-                            {% for brand in brands %}
-                            <li><input type="checkbox" id="brandPk-{{brand.pk}}" name="brandPk-{{ brand.pk }}"><label for="brandPk-{{brand.pk}}">{{ brand }}</label></li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
                 <div class="filter-section">

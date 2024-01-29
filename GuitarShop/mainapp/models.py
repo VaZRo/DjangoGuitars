@@ -17,6 +17,7 @@ class Category(models.Model):
 class Brand(models.Model):
     name = models.CharField(verbose_name='brand Name', max_length=100, unique=True)
     description = models.TextField(verbose_name='description', blank=True)
+    image = models.ImageField(upload_to='brands/', blank=True)
     id_deleted = models.BooleanField(default=False)
 
     def __str__(self):

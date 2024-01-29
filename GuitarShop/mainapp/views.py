@@ -77,7 +77,8 @@ def get_products(request):
 def index(request):
     prods = Product.objects.all()[:5]
     basket = get_basket(request.user)
-    context = get_data(prods=prods, basket=basket)
+    brands = Brand.objects.all()[:5]
+    context = get_data(prods=prods, basket=basket, brands=brands)
     return render(request, 'index.html', context)
 
 
@@ -91,6 +92,14 @@ def products(request):
 def product(request, pk):
     prod = Product.objects.get(pk=pk)
     basket = get_basket(request.user)
-    context = get_data(prod=prod, basket=basket)
-
+    prods = Product.objects.all()[:5]
+    context = get_data(prod=prod, basket=basket, prods=prods)
     return render(request, 'product.html', context)
+
+
+def brand(request, pk):
+    brand_ = Brand.objects.get(pk=pk)
+    prods = Product.objects.filter(brand=pk)
+    basket = get_basket(request.user)
+    context = get_data(prods=prods, basket=basket, brand=brand_)
+    return render(request, 'brand.html', context)

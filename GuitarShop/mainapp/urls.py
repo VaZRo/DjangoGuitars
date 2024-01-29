@@ -7,5 +7,5 @@ urlpatterns = [
     path('', products, name='index'),
     path('product/<int:pk>/', product, name='product'),
     path('get-products/', get_products, name='get_products'),
-    path('auth/', include('authapp.urls', namespace='auth')),
+    # path('auth/', include('authapp.urls', namespace='auth')),
 ]

@@ -5,20 +5,25 @@
 {% block content %}
 
 
-<div class="interface">
+    <div class="interface">
 
         <div class="product-details">
             <div class="image-price-container">
                 {% if prod.image %}
                     <img src="{{ prod.image.url }}" class="product-image" alt="{{ prod.name }}"/>
                 {% else %}
-                    <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image" alt="{{ prod.name }}"/>
+                    <img src="{% static 'img/jackson-soloist-orange.png' %}" class="product-image"
+                         alt="{{ prod.name }}"/>
                 {% endif %}
-                <div class="info-container">
-                    <div class="product-name">{{ prod.brand }}</div>
-                    <div class="product-name">{{ prod.name }}</div>
-                    <div class="product-price">{{ prod.price }} $</div>
-                    <a href="{% url 'basket:add' prod.pk %}"><div class="buy">Add To Cart</div></a>
+                <div class="product-info">
+                    <img class="mini-brand-logo" src="{{ prod.brand.image.url }}"/>
+                    <div class="info-container">
+                        <div class="product-name">{{ prod.name }}</div>
+                        <div class="product-price">{{ prod.price }} $</div>
+                        <a href="{% url 'basket:add' prod.pk %}">
+                            <div class="buy">Add To Cart</div>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -29,6 +34,37 @@
         </div>
 
     </div>
+
+            <div class="carousel">
+            <div class="guitars-text">Featured</div>
+            <div class="big-line"></div>
+            <div class="guitars slider">
+            {% for prod in prods %}
+
+            <div class="model" id="{{ prod.pk }}">
+                <div class="all">
+                    {% if prod.image %}
+                    <a href="{% url 'products:product' prod.pk %}"><img class="guitar" src="{{ prod.image.url }}" alt="{{ prod.name }}"></a>
+                    {% else %}
+                    <img class="guitar" src="{% static 'img/jaskson-soloist-orange.png' %}" alt="No Image">
+                    {% endif %}
+
+                    <div class="info">
+                        <div class="name">{{ prod.name }}</div>
+                        <div class="line"></div>
+                        <div class="price">{{ prod.price }} $</div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            </div>
+
+            <div class="buttons">
+                <div class="button-left">LEFT</div>
+                <div class="button-right">RIGHT</div>
+            </div>
+        </div>
 
 
 {% endblock %}

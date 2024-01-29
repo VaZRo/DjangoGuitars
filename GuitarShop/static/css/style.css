@@ -68,6 +68,15 @@ label {
     flex-direction: column;
 }
 
+.product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-brand-logo{
+    width: 150px;
+}
+
 .slidere {
     position: relative;
     width: 100%;
@@ -134,18 +143,18 @@ label {
     color: black;
 }
 
-.brands {
+.all.brands {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    height: 300px;
 }
 
-.ibanez, .fender, .gibson {
+.brand{
+    height: auto;
     width: 300px;
+
 }
 
 .ibanez-d {
@@ -170,7 +179,7 @@ label {
     padding: 20px 0px
 }
 
-.carousel {
+.carousel, .brand-slider {
     padding: 30px 0px;
 }
 
@@ -195,7 +204,7 @@ label {
 }
 
 .guitars .guitar{
-    height: 500px !important;
+    height: 580px !important;
 }
 
 .guitar {
@@ -674,9 +683,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    width: 100%;
     border: 1px black solid;
-    margin: 50px 20px;
+    margin: 0px 20px;
     box-shadow: grey 0px 0px 3px;
     justify-content: space-evenly;
     padding-left: 10px;
@@ -823,6 +832,10 @@ td a{
 @media screen and (max-width: 1150px) {
     .menu.sticky {
         transform: none !important;
+    }
+
+    .brand{
+        width: 200px !important;
     }
 
     .filters {

@@ -35,6 +35,30 @@
     <!-- Page Main Content Starts Here -->
 
     <div class="cont">
+        <div class="brand-slider">
+            <div class="guitars-text">Brands</div>
+            <div class="big-line"></div>
+            <div class="guitars slider">
+            {% for brand in brands %}
+
+            <div class="model" id="{{ brand.pk }}">
+                <div class="all brands">
+                    {% if brand.image %}
+                    <a href="#"><img class="brand" src="{{ brand.image.url }}" alt="{{ brand.name }}"></a>
+                    {% else %}
+                    <img class="brand" src="{% static 'img/jaskson-soloist-orange.png' %}" alt="No Image">
+                    {% endif %}
+                </div>
+            </div>
+
+            {% endfor %}
+            </div>
+
+            <div class="buttons">
+                <div class="button-left">LEFT</div>
+                <div class="button-right">RIGHT</div>
+            </div>
+        </div>
 
         <!-- Featured Items Starts Here -->
 
