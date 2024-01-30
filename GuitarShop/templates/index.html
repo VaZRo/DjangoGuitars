@@ -44,7 +44,7 @@
             <div class="model" id="{{ brand.pk }}">
                 <div class="all brands">
                     {% if brand.image %}
-                    <a href="#"><img class="brand" src="{{ brand.image.url }}" alt="{{ brand.name }}"></a>
+                    <a href="{% url 'products:brand' brand.pk %}"><img class="brand" src="{{ brand.image.url }}" alt="{{ brand.name }}"></a>
                     {% else %}
                     <img class="brand" src="{% static 'img/jaskson-soloist-orange.png' %}" alt="No Image">
                     {% endif %}

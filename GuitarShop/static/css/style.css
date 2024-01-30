@@ -28,7 +28,7 @@ a {
     color: #ffffff;
 }
 
-.info a, .info-container a{
+.info a, .info-container a {
     color: black;
 }
 
@@ -68,12 +68,12 @@ label {
     flex-direction: column;
 }
 
-.product-info{
+.product-info {
     display: flex;
     flex-direction: column;
 }
 
-.mini-brand-logo{
+.mini-brand-logo {
     width: 150px;
 }
 
@@ -151,7 +151,7 @@ label {
     height: 300px;
 }
 
-.brand{
+.brand {
     height: auto;
     width: 300px;
 
@@ -203,7 +203,7 @@ label {
     max-width: 1300px;
 }
 
-.guitars .guitar{
+.guitars .guitar {
     height: 580px !important;
 }
 
@@ -617,7 +617,6 @@ body {
 }
 
 
-
 .apply-button {
     background-color: forestgreen;
     width: 95%;
@@ -632,7 +631,7 @@ body {
 
 }
 
-.clear-button{
+.clear-button {
     background-color: grey;
     width: 95%;
     height: 100%;
@@ -691,7 +690,7 @@ body {
     padding-left: 10px;
 }
 
-.info-container .buy{
+.info-container .buy {
     width: 150px;
     height: 50px;
     display: flex;
@@ -702,11 +701,11 @@ body {
 
 }
 
-.product-desc{
+.product-desc {
     width: 100%;
 }
 
-.apply-button-div{
+.apply-button-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -714,7 +713,7 @@ body {
     margin-bottom: 10px;
 }
 
-.clear-button-div{
+.clear-button-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -722,72 +721,73 @@ body {
     margin-bottom: 10px;
 }
 
-input{
+input {
     width: 200px;
     height: 30px;
     padding-left: 5px;
-    margin: 10px 0px ;
+    margin: 10px 0px;
 }
 
-label{
+label {
     font-weight: bold;
 }
 
-button{
+button {
     width: 200px;
     height: 30px;
-    margin: 10px 0px ;
+    margin: 10px 0px;
     background-color: forestgreen;
 }
 
-.login-form{
+.login-form {
     display: flex;
     justify-content: center;
     margin: 20px 0px;
 }
 
-#contact{
+#contact {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.product-desc{
+.product-desc {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border: 1px black solid;
     margin: 10px;
     font-size: 13pt;
+    box-shadow: grey 0px 0px 3px;
 }
 
 .btn.active a {
     color: #1e1e1e;
 }
 
-#pre-header .blue-menu{
+#pre-header .blue-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-#pre-header span{
+#pre-header span {
     padding: 0;
 }
 
-#pre-header .price{
+#pre-header .price {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
-#pre-header a{
-    display:flex;
+#pre-header a {
+    display: flex;
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-#pre-header .blue-menu .basket{
+#pre-header .blue-menu .basket {
     justify-content: flex-end;
     align-items: flex-start;
     background: url("../img/jackson-soloist-orange.png") no-repeat;
@@ -797,35 +797,35 @@ button{
     margin-bottom: 5px;
 }
 
-#pre-header .basket span{
-     width: 16px;
-     height: 16px;
-     font-size: 13px;
-     padding: 0;
-     text-align: center;
-     background-color: #3a8bcd;
-     border-radius: 50%;
+#pre-header .basket span {
+    width: 16px;
+    height: 16px;
+    font-size: 13px;
+    padding: 0;
+    text-align: center;
+    background-color: #3a8bcd;
+    border-radius: 50%;
 }
 
-.basket_list{
+.basket_list {
     margin: 100px 0px
 }
 
-td{
+td {
     padding: 0px 40px
 }
 
-td a{
+td a {
     color: black;
 }
 
-.basket_list{
+.basket_list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.basket_summary{
+.basket_summary {
     margin-top: 20px;
 }
 
@@ -834,7 +834,7 @@ td a{
         transform: none !important;
     }
 
-    .brand{
+    .brand {
         width: 200px !important;
     }
 
@@ -906,17 +906,17 @@ td a{
     }
 
     .info-container .buy {
-    width: 90%;
-    height: 40px;
-    font-weight: bold;
-    font-size: 12pt;
+        width: 90%;
+        height: 40px;
+        font-weight: bold;
+        font-size: 12pt;
     }
 
     .info-container {
         height: 240px;
     }
 
-    .info{
+    .info {
         height: 230px;
         width: 200px;
     }
@@ -931,7 +931,7 @@ td a{
         align-items: center;
     }
 
-    .clear-button-div{
+    .clear-button-div {
         position: fixed;
         bottom: 10%;
         width: 100%;
@@ -941,7 +941,7 @@ td a{
         align-items: center;
     }
 
-    .logo{
-        width: 35%;
+    .logo {
+        width: 40px;
     }
 }

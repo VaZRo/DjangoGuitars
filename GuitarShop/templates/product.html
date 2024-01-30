@@ -16,7 +16,7 @@
                          alt="{{ prod.name }}"/>
                 {% endif %}
                 <div class="product-info">
-                    <img class="mini-brand-logo" src="{{ prod.brand.image.url }}"/>
+                    <a href="{% url 'products:brand' prod.brand.pk %}"><img class="mini-brand-logo" src="{{ prod.brand.image.url }}"/></a>
                     <div class="info-container">
                         <div class="product-name">{{ prod.name }}</div>
                         <div class="product-price">{{ prod.price }} $</div>
@@ -29,7 +29,11 @@
             </div>
 
 
-            <div class="product-desc">{{ prod.description }}</div>
+            <div class="product-desc">
+                <h2 style="text-align:center">DESCRIPTION</h2>
+                <div class="big-line"></div>
+                {{ prod.description }}
+            </div>
 
         </div>
 

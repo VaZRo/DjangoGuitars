@@ -39,7 +39,7 @@ $(document).ready(function () {
     function getProduct() {
         // При загрузке страницы делаем AJAX-запрос
         $.ajax({
-            url: '/products/get-products/',
+            url: '/products/get-products-by-brand/',
             type: 'POST',
             data: JSON.stringify({
                 filterData: filterData
