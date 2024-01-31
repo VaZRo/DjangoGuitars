@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<!-- Page Main Content Starts Here -->
+    <!-- Page Main Content Starts Here -->
 
     <div class="filters-mobile">
         <form method="POST" id="filterForm">
@@ -24,7 +24,9 @@
                     <div class="filter-options">
                         <ul>
                             {% for type in types %}
-                            <li><input type="checkbox" id="typeMobilePk-{{type.pk}}" name="typePk-{{ type.pk }}"><label for="typeMobilePk-{{type.pk}}">{{ type }}</label></li>
+                                <li><input type="checkbox" id="typeMobilePk-{{ type.pk }}"
+                                           name="typePk-{{ type.pk }}"><label
+                                        for="typeMobilePk-{{ type.pk }}">{{ type }}</label></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -37,7 +39,9 @@
                     <div class="filter-options">
                         <ul>
                             {% for color in colors %}
-                            <li><input type="checkbox" id="colorMobilePk-{{color.pk}}" name="colorPk-{{ color.pk }}"><label for="colorMobilePk-{{color.pk}}">{{ color }}</label></li>
+                                <li><input type="checkbox" id="colorMobilePk-{{ color.pk }}"
+                                           name="colorPk-{{ color.pk }}"><label
+                                        for="colorMobilePk-{{ color.pk }}">{{ color }}</label></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -50,7 +54,9 @@
                     <div class="filter-options">
                         <ul>
                             {% for category in categories %}
-                            <li><input type="checkbox" id="categoryMobilePk-{{category.pk}}" name="categoryPk-{{ category.pk }}"><label for="categoryPk-{{category.pk}}">{{ category }}</label></li>
+                                <li><input type="checkbox" id="categoryMobilePk-{{ category.pk }}"
+                                           name="categoryPk-{{ category.pk }}"><label
+                                        for="categoryPk-{{ category.pk }}">{{ category }}</label></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -67,74 +73,85 @@
 
 
 
-    <div class="interface">
-
+    <div class="interface brand-name">
         <!-- Products Section Starts Here -->
 
+        <div class="main-brand-name">
+            <img class="mini-brand-logo" src="{{ brand.image.url }}"/>
+            <div class="big-line"></div>
+        </div>
         <div class="mobile-filter-button">
             FILTER
         </div>
 
-        <div class="filters">
-            <form method="POST" id="filterForm">
-                {% csrf_token %}
-                <div class="filter-head">
-                    <div class="filter-sign">FILTER</div>
-                    <div class="close-icon">
+        <div class="filter-products">
+            <div class="filters">
+                <form method="POST" id="filterForm">
+                    {% csrf_token %}
+                    <div class="filter-head">
+                        <div class="filter-sign">FILTER</div>
+                        <div class="close-icon">
+                        </div>
                     </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">
-                        <p>TYPE</p>
-                        <i class="ri-add-line show-icon"></i>
+                    <div class="filter-section">
+                        <div class="filter-name toggle-button">
+                            <p>TYPE</p>
+                            <i class="ri-add-line show-icon"></i>
+                        </div>
+                        <div class="filter-options">
+                            <ul>
+                                {% for type in types %}
+                                    <li><input type="checkbox" id="typePk-{{ type.pk }}"
+                                               name="typePk-{{ type.pk }}"><label
+                                            for="typePk-{{ type.pk }}">{{ type }}</label></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                    <div class="filter-options">
-                        <ul>
-                            {% for type in types %}
-                            <li><input type="checkbox" id="typePk-{{type.pk}}" name="typePk-{{ type.pk }}"><label for="typePk-{{type.pk}}">{{ type }}</label></li>
-                            {% endfor %}
-                        </ul>
+                    <div class="filter-section">
+                        <div class="filter-name toggle-button">
+                            <p>COLOR</p>
+                            <i class="ri-add-line show-icon"></i>
+                        </div>
+                        <div class="filter-options">
+                            <ul>
+                                {% for color in colors %}
+                                    <li><input type="checkbox" id="colorPk-{{ color.pk }}"
+                                               name="colorPk-{{ color.pk }}"><label
+                                            for="colorPk-{{ color.pk }}">{{ color }}</label></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">
-                        <p>COLOR</p>
-                        <i class="ri-add-line show-icon"></i>
+                    <div class="filter-section">
+                        <div class="filter-name toggle-button">
+                            <p>CATEGORY</p>
+                            <i class="ri-add-line show-icon"></i>
+                        </div>
+                        <div class="filter-options">
+                            <ul>
+                                {% for category in categories %}
+                                    <li><input type="checkbox" id="categoryPk-{{ category.pk }}"
+                                               name="categoryPk-{{ category.pk }}"><label
+                                            for="categoryPk-{{ category.pk }}">{{ category }}</label></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                    <div class="filter-options">
-                        <ul>
-                            {% for color in colors %}
-                            <li><input type="checkbox" id="colorPk-{{color.pk}}" name="colorPk-{{ color.pk }}"><label for="colorPk-{{color.pk}}">{{ color }}</label></li>
-                            {% endfor %}
-                        </ul>
+                    <div class="clear-button-div">
+                        <button type="button" class="clear-button">CLEAR</button>
                     </div>
-                </div>
-                <div class="filter-section">
-                    <div class="filter-name toggle-button">
-                        <p>CATEGORY</p>
-                        <i class="ri-add-line show-icon"></i>
+                    <div class="apply-button-div">
+                        <button type="button" class="apply-button">APPLY</button>
                     </div>
-                    <div class="filter-options">
-                        <ul>
-                            {% for category in categories %}
-                            <li><input type="checkbox" id="categoryPk-{{category.pk}}" name="categoryPk-{{ category.pk }}"><label for="categoryPk-{{category.pk}}">{{ category }}</label></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                <div class="clear-button-div">
-                    <button type="button" class="clear-button">CLEAR</button>
-                </div>
-                <div class="apply-button-div">
-                    <button type="button" class="apply-button">APPLY</button>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
 
-        <div class="products" id="product-container">
+            <div class="products" id="product-container">
 
-            <!-- Products generate here -->
+                <!-- Products generate here -->
 
+            </div>
         </div>
         <!-- Products Section Ends Here -->
 
