@@ -58,9 +58,6 @@ label {
     padding-left: 30px;
 }
 
-.cart, .location {
-    padding: 0px 10px;
-}
 
 .upper {
     display: flex;

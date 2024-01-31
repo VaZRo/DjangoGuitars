@@ -23,6 +23,36 @@
 
 <body>
 
+        <div id="cart-menu" class="modal cart-menu">
+    <div class="modal-content">
+        <div class="modal-head">SHOPING CART</div>
+        <div class="modal-line"></div>
+        <div class="modal-body">
+            {% for item in basket %}
+                <div class="pos">
+                    <div class="pos-left">
+                        <div class="ava-div"><img src="{{ item.product.image.url }}"/></div>
+                        <div class="pos-text">
+                            <div> {{ item.product.name }}</div>
+                            <div>{{ item.product_cost }} $</div>
+                            <input type="number" name="{{ item.pk }}" value="{{ item.quantity }}" min="0">
+                        </div>
+                    </div>
+
+                    <a href="{% url 'basket:remove' item.pk %}">
+                        <div class="pos-delete"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
+                    </a>
+                </div>
+            {% endfor %}
+            <div class="modal-empty"></div>
+        </div>
+        <div class="modal-line"></div>
+        <div class="modal-footer">
+            <div class="modal-button">Buy</div>
+        </div>
+    </div>
+</div>
+
 
 <div class="main_page">
 
@@ -35,7 +65,6 @@
     <!-- Page Main Content Starts Here -->
 
     {% block content %}
-        base
     {% endblock %}
 
     <!-- Page Main Content Ends Here -->
@@ -75,6 +104,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <script src="{% static 'js/navbar.js' %}"></script>
 <script src="{% static 'js/filter.js' %}"></script>
+        <script src="{% static 'js/basket.js' %}"></script>
 {% block js %}
 {% endblock %}
 </body>

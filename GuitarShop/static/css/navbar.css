@@ -64,8 +64,9 @@ body {
 
 input,
 button {
-  border: none;
-  outline: none;
+  /*border: none;*/
+  /*outline: none;*/
+  width: 50px;
 }
 
 ul {

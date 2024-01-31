@@ -1,0 +1,55 @@
+{#<table class="table basket_list">#}
+{#    <thead>#}
+{#    <tr>#}
+{#        <th scope="col">#</th>#}
+{#        <th scope="col">Продукт</th>#}
+{#        <th scope="col">Количество</th>#}
+{#        <th scope="col">Стоимость</th>#}
+{#        <th scope="col">Удалить</th>#}
+{##}
+{#    </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#    {% for item in basket %}#}
+{#    <tr>#}
+{#        <th scope="row">{{ forloop.counter }}</th>#}
+{#        <td>{{ item.product }}</td>#}
+{#        <td>#}
+{#            <input type="number" name="{{ item.pk }}" value="{{ item.quantity }}" min="0">#}
+{##}
+{#        </td>#}
+{#        <td>{{ item.product_cost }}</td>#}
+{#        <td>#}
+{#            <a class="btn btn-round" href="{% url 'basket:remove' item.pk %}">Удалить</a>#}
+{#        </td>#}
+{#    </tr>#}
+{#    {% endfor %}#}
+{#    </tbody>#}
+{#</table>#}
+{#{% if basket %}#}
+{#<div class="basket_summary mb-5">#}
+{#    В корзине {{ basket.0.total_quantity }}#}
+{#    товаров стоимостью {{ basket.0.total_cost|floatformat:'2g' }} $#}
+{#</div>#}
+{#{% endif %}#}
+
+
+<div class="modal-body">
+            {% for item in basket %}
+                <div class="pos">
+                    <div class="pos-left">
+                        <div class="ava-div"><img src="{{ item.product.image.url }}"/></div>
+                        <div class="pos-text">
+                            <div> {{ item.product.name }}</div>
+                            <div>{{ item.product_cost }}</div>
+                            <input type="number" name="{{ item.pk }}" value="{{ item.quantity }}" min="0">
+                        </div>
+                    </div>
+
+                    <a href="{% url 'basket:remove' item.pk %}">
+                        <div class="pos-delete"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
+                    </a>
+                </div>
+            {% endfor %}
+            <div class="modal-empty"></div>
+        </div>

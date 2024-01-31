@@ -33,7 +33,8 @@
 
                 {% if user.is_authenticated %}
                     {% if basket %}
-                        <a href="{% url 'basket:index' %}"><i class="ri-shopping-cart-line nav__cart"></i></a>
+{#                        <a href="{% url 'basket:index' %}"><i class="ri-shopping-cart-line nav__cart"></i></a>#}
+                        <i class="ri-shopping-cart-line nav__cart cart"></i>
                     {% endif %}
                 <a href="{% url 'auth:edit' %}"><i class="ri-user-line nav__login" id="login-btn"></i></a>
                 <a href="{% url 'auth:logout' %}"><i class="ri-logout-box-r-line nav__logout"></i></a>
@@ -42,10 +43,14 @@
                     <a href="{% url 'auth:login' %}"><i class="ri-user-line nav__login" id="login-btn"></i></a>
                 {% endif %}
 
-                <!-- Toggle button -->
+                <!-- Toggle button !-->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
         </nav>
     </header>
+
+{% block js %}
+    <script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}
