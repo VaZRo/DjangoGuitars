@@ -28,6 +28,7 @@
         <div class="modal-head">SHOPING CART</div>
         <div class="modal-line"></div>
         <div class="modal-body">
+            {% if basket %}
             {% for item in basket %}
                 <div class="pos">
                     <div class="pos-left">
@@ -39,12 +40,12 @@
                         </div>
                     </div>
 
-                    <a href="{% url 'basket:remove' item.pk %}">
-                        <div class="pos-delete"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
-                    </a>
+                        <div class="pos-delete" id="{{ item.pk }}"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
                 </div>
             {% endfor %}
-            <div class="modal-empty"></div>
+            {% else %}
+            <div class="modal-empty">The Cart Is Empty, Add Something :)</div>
+            {% endif %}
         </div>
         <div class="modal-line"></div>
         <div class="modal-footer">
@@ -105,6 +106,7 @@
 <script src="{% static 'js/navbar.js' %}"></script>
 <script src="{% static 'js/filter.js' %}"></script>
         <script src="{% static 'js/basket.js' %}"></script>
+        <script src="{% static 'js/addToCart.js' %}"></script>
 {% block js %}
 {% endblock %}
 </body>

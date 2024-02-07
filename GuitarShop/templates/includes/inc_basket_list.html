@@ -46,9 +46,9 @@
                         </div>
                     </div>
 
-                    <a href="{% url 'basket:remove' item.pk %}">
-                        <div class="pos-delete"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
-                    </a>
+
+                        <div class="pos-delete" onclick="deleteFromCart(event)"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
+
                 </div>
             {% endfor %}
             <div class="modal-empty"></div>

@@ -266,6 +266,7 @@ label {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .buy:hover {
@@ -312,7 +313,7 @@ label {
 
 .modal-line {
     height: 1px;
-    width: 500px;
+    width: 50%;
     background-color: black;
     margin: 10px 0px;
 }
@@ -584,6 +585,11 @@ body {
     display: none;
 }
 
+.quantity{
+
+width:50px
+}
+
 .filter-options input[type="checkbox"] + label {
     position: relative;
     padding-left: 30px;
@@ -681,7 +687,7 @@ body {
     align-items: flex-start;
     width: 100%;
     border: 1px black solid;
-    margin: 0px 20px;
+    margin: 0px 10px;
     box-shadow: grey 0px 0px 3px;
     justify-content: space-evenly;
     padding-left: 10px;
@@ -940,5 +946,14 @@ td a {
 
     .logo {
         width: 40px;
+    }
+
+    .modal.cart-menu{
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .modal-body{
+    width: 80%;
     }
 }

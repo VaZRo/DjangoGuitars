@@ -20,25 +20,40 @@ def basket(request):
 
 @login_required
 def basket_add(request, pk):
-    product = get_object_or_404(Product, pk=pk)
-    user_basket = Basket.objects.filter(user=request.user, product=product).first()
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
 
-    if not user_basket:
-        user_basket = Basket(user=request.user, product=product)
+        product = get_object_or_404(Product, pk=pk)
+        user_basket = Basket.objects.filter(user=request.user, product=product).first()
 
-    user_basket.quantity += 1
-    user_basket.save()
+        if not user_basket:
+            user_basket = Basket(user=request.user, product=product)
 
-    if 'login' in request.META.get('HTTP_REFERER'):
-        return HttpResponseRedirect(reverse('products:product', args=[pk]))
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        user_basket.quantity += 1
+        user_basket.save()
+
+        basket_items = Basket.objects.filter(user=request.user)
+
+        context = {
+            'basket': basket_items,
+        }
+
+        result = render_to_string('includes/inc_basket_list.html', context)
+        return JsonResponse({'result': result})
 
 
 @login_required
 def basket_remove(request, pk):
-    basket_item = get_object_or_404(Basket, pk=pk)
-    basket_item.delete()
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        basket_item = get_object_or_404(Basket, pk=pk)
+        basket_item.delete()
+
+        basket_items = Basket.objects.filter(user=request.user)
+
+        context = {
+            'basket': basket_items,
+        }
+        result = render_to_string('includes/inc_basket_list.html', context)
+        return JsonResponse({'result': result})
 
 
 @login_required
