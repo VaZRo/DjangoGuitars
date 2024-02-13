@@ -328,6 +328,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: black;
 }
 
 .modal-button.invisible {
@@ -830,6 +831,10 @@ td a {
 
 .basket_summary {
     margin-top: 20px;
+}
+
+.check{
+    padding: 10px;
 }
 
 @media screen and (max-width: 1150px) {

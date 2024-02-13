@@ -75,3 +75,13 @@ def basket_edit(request, pk, quantity):
 
         result = render_to_string('includes/inc_basket_list.html', context)
         return JsonResponse({'result': result})
+
+
+@login_required
+def checkout(request):
+    basket_items = Basket.objects.filter(user=request.user)
+
+    context = {
+        'basket': basket_items,
+    }
+    return render(request, 'checkout.html', context)
