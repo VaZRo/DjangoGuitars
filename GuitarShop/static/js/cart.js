@@ -26,18 +26,18 @@ $(document).ready(function() {
           });
     });
 
-    $("#cart-menu").on("click", ".pos-delete", function Delete() {
-        carts.splice($(this).index(), 1);
-        i--;
-        if(i == 0){
-            carts = [];
-        }
-        $(this).parent().remove();
-        if(carts.length == 0){
-            $(".modal-empty").text("Shopping Cart Is Empty");
-            $(".cart-menu .modal-button").addClass("invisible");
-        }
-    });
+    // $("#cart-menu").on("click", ".pos-delete", function Delete() {
+    //     carts.splice($(this).index(), 1);
+    //     i--;
+    //     if(i == 0){
+    //         carts = [];
+    //     }
+    //     $(this).parent().remove();
+    //     if(carts.length == 0){
+    //         $(".modal-empty").text("Shopping Cart Is Empty");
+    //         $(".cart-menu .modal-button").addClass("invisible");
+    //     }
+    // });
 
     $("#cart-menu").on("click", ".modal-button", function() {
         $('#cart-buy').modal({

@@ -35,6 +35,7 @@
 
 
 <div class="modal-body">
+        {% if basket %}
             {% for item in basket %}
                 <div class="pos">
                     <div class="pos-left">
@@ -47,9 +48,11 @@
                     </div>
 
 
-                        <div class="pos-delete" onclick="deleteFromCart(event)"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
+                        <div class="pos-delete" onclick="deleteFromCart(event)"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;" id="{{ item.pk }}"></i></div>
 
                 </div>
             {% endfor %}
-            <div class="modal-empty"></div>
+        {% else %}
+            <div class="modal-empty">The Cart Is Empty, Add Something :)</div>
+        {% endif %}
         </div>

@@ -7,6 +7,7 @@ from django.urls import reverse
 from mainapp.models import Product
 from .models import Basket
 from mainapp.views import get_data
+from authapp.views import login
 
 
 @login_required
