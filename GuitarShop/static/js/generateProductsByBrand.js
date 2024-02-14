@@ -79,7 +79,7 @@ $(document).ready(function () {
                             <div class="name">${prod.name}</div>
                             <div class="line"></div>
                             <div class="price">${prod.price} $</div>
-                            <a href="${prod.basket_add_url}"><div class="buy">Add To Cart</div></a>
+                            <div class="buy" id="${ prod.pk }">Add To Cart</div>
                         </div>
                     </div>
                 </div>

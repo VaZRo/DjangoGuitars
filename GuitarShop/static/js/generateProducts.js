@@ -79,7 +79,7 @@ $(document).ready(function () {
                             <div class="name">${prod.name}</div>
                             <div class="line"></div>
                             <div class="price">${prod.price} $</div>
-                            <div class="buy" id="${prod.pk}" onclick="addToCart(event)">Add To Cart</div>
+                            <div class="buy" id="${ prod.pk }">Add To Cart</div>
                         </div>
                     </div>
                 </div>

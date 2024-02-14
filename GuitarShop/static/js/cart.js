@@ -1,15 +1,15 @@
 $(document).ready(function() {
-
-    $(".buy").click(function(){
-        var parent = $(this).parent();
-        var name = parent.find(".name").text();
-        var price = parent.find(".price").text();
-        var src = parent.parent().find(".guitar").attr("src");
-        carts.push(new Cart(name, price, src));
-        $(".cart-menu .modal-body").append("<div class=\"pos\"><div class=\"pos-left\"><div class=\"ava-div\"><img src=\"" + carts[i].img + "\" class=\"ava\"/></div><div class=\"pos-text\"><div>Name: " + carts[i].name + "</div><div>Price: " + carts[i].price + "</div></div></div><div class=\"pos-delete\"><i class=\"fa-solid fa-trash fa-2xl\" style=\"color: #000000;\"></i></div></div>");
-        i++;
-        $(".cart-menu .modal-button").removeClass("invisible");
-    });
+//
+//    $(".buy").click(function(){
+//        var parent = $(this).parent();
+//        var name = parent.find(".name").text();
+//        var price = parent.find(".price").text();
+//        var src = parent.parent().find(".guitar").attr("src");
+//        carts.push(new Cart(name, price, src));
+//        $(".cart-menu .modal-body").append("<div class=\"pos\"><div class=\"pos-left\"><div class=\"ava-div\"><img src=\"" + carts[i].img + "\" class=\"ava\"/></div><div class=\"pos-text\"><div>Name: " + carts[i].name + "</div><div>Price: " + carts[i].price + "</div></div></div><div class=\"pos-delete\"><i class=\"fa-solid fa-trash fa-2xl\" style=\"color: #000000;\"></i></div></div>");
+//        i++;
+//        $(".cart-menu .modal-button").removeClass("invisible");
+//    });
 
     $(".cart").click(function(){
         // if(carts.length == 0){

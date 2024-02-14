@@ -747,6 +747,7 @@ button {
     display: flex;
     justify-content: center;
     margin: 20px 0px;
+    flex-wrap: wrap;
 }
 
 #contact {
@@ -960,5 +961,9 @@ td a {
 
     .modal-body{
     width: 80%;
+    }
+
+    .pos-text{
+        width: 100%;
     }
 }

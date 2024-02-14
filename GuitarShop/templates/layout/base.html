@@ -40,7 +40,7 @@
                         </div>
                     </div>
 
-                        <div class="pos-delete" id="{{ item.pk }}"><i class="fa-solid fa-trash fa-2xl" style="color: #000000;"></i></div>
+                        <div class="pos-delete" onclick="deleteFromCart(event)" id="{{ item.pk }}"><i class="fa-solid fa-trash fa-2xl" id="{{ item.pk }}" style="color: #000000;"></i></div>
                 </div>
             {% endfor %}
             {% else %}
@@ -105,7 +105,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <script src="{% static 'js/navbar.js' %}"></script>
 <script src="{% static 'js/filter.js' %}"></script>
-        <script src="{% static 'js/basket.js' %}"></script>
+<script src="{% static 'js/basket.js' %}"></script>
         <script src="{% static 'js/addToCart.js' %}"></script>
 {% block js %}
 {% endblock %}

@@ -20,9 +20,7 @@
                     <div class="info-container">
                         <div class="product-name">{{ prod.name }}</div>
                         <div class="product-price">{{ prod.price }} $</div>
-                        <a href="{% url 'basket:add' prod.pk %}">
-                            <div class="buy">Add To Cart</div>
-                        </a>
+                        <div class="buy" id="{{ prod.pk }}">Add To Cart</div>
                     </div>
                 </div>
 
