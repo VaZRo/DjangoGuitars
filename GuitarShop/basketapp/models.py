@@ -1,7 +1,46 @@
 from django.db import models
-
 from mainapp.models import Product
 from GuitarShop import settings
+
+
+class Card(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='card',
+    )
+
+    add_datetime = models.DateTimeField(
+        verbose_name='время',
+        auto_now_add=True,
+    )
+
+    number = models.CharField(
+        verbose_name='номер',
+        max_length=16,
+    )
+
+    owner_name = models.CharField(
+        verbose_name="имя владельца",
+        max_length=100,
+    )
+
+    cvv = models.CharField(
+        verbose_name='CVV',
+        max_length=3,
+    )
+
+    validity = models.CharField(
+        verbose_name='срок действия',
+        max_length=5,
+    )
+
+    def __str__(self):
+        return self.number
+
+    class Meta:
+        verbose_name = 'Карта'
+        verbose_name_plural = 'Карты'
 
 
 class Order(models.Model):
@@ -25,6 +64,18 @@ class Order(models.Model):
         verbose_name='Адрес',
         max_length=300,
     )
+
+    card = models.ForeignKey(
+        Card,
+        on_delete=models.CASCADE,
+        verbose_name='Карта',
+        null=True,
+        blank=True,
+        editable=False,
+    )
+
+    def __str__(self):
+        return f"{self.user} - {self.address}"
 
     class Meta:
         verbose_name = 'Заказ'

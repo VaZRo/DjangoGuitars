@@ -1,13 +1,14 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect, JsonResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
 from django.template.loader import render_to_string
 from django.urls import reverse
 
 from mainapp.models import Product
-from .models import Basket
+from .models import Basket, Order, Card, OrderDetails
 from mainapp.views import get_data
 from authapp.views import login
+from .forms import CardForm, OrderForm
 
 
 @login_required
@@ -85,3 +86,44 @@ def checkout(request):
         'basket': basket_items,
     }
     return render(request, 'checkout.html', context)
+
+
+
+def create_order(request):
+    basket_items = Basket.objects.filter(user=request.user)
+    context = {
+        'basket': basket_items,
+    }
+
+    card_form = CardForm(request.POST)
+    order_form = OrderForm(request.POST)
+
+    if card_form.is_valid() and order_form.is_valid():
+        card = card_form.save(commit=False)
+        card.user = request.user
+        card.save()
+
+        order = order_form.save(commit=False)
+        order.user = request.user
+        order.status = "Заказ собирается"
+        order.card = card
+        order.save()
+
+        for basket_item in basket_items:
+            order_detail = OrderDetails.objects.create(
+                order=order,
+                user=basket_item.user,
+                product=basket_item.product,
+                quantity=basket_item.quantity,
+            )
+
+        basket_items.delete()
+
+        return render(request, 'checkout.html', context)
+    else:
+        print("Form errors:", card_form.errors, order_form.errors)
+
+    return HttpResponse(f"""
+                ERROR
+            """)
+

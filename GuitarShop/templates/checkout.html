@@ -8,9 +8,26 @@
     <div class="interface">
 
         <div class="login-form">
-            <form id="contact" action="" method="post" enctype="multipart/form-data">
+            <form id="contact" action="{% url 'basketapp:create_order' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
                 <label>Your Address</label>
-                <input type="text"/>
+                <input type="text" name="address" required/>
+                <div class="card-info">
+                    <label>Card Number</label>
+                    <input type="text" name="number" maxlength="16" pattern="\d{16}" title="Enter a 16-digit card number" required/>
+                    <div class="owner-date">
+                        <div>
+                            <label>Owner Name</label>
+                            <input type="text" name="owner_name" id="ownerName" pattern="[a-zA-Z\s]+" title="Enter a valid name" required/>
+                        </div>
+                        <div>
+                            <label>Date</label>
+                            <input type="text" maxlength="5" name="validity" id="cardDate" pattern="(0[1-9]|1[0-2])\/\d{2}" title="Enter a valid date in MM/YY format" placeholder="MM/YY" required/>
+                        </div>
+                    </div>
+                    <label>CVV</label>
+                    <input type="password" maxlength="3" name="cvv" id="cardCVV" pattern="\d{3}" title="Enter a 3-digit CVV" required/>
+                </div>
                 <button type="submit" class="btn btn-primary my-4">Submit</button>
                 <a href="{% url 'products:index' %}">
                     <button type="button" class="btn btn-primary my-4">Back To Shop</button>
@@ -20,15 +37,24 @@
                 {% for item in basket %}
                     <div class="check">
                         <div class="pos-text">
-                            <div class="check-text"> {{ item.product.name }} X {{ item.quantity }} = {{ item.product_cost }} $</div>
+                            <div class="check-text"> {{ item.product.name }} X {{ item.quantity }}
+                                = {{ item.product_cost }} $
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
-                <div class="check"><div class="modal-line"></div>{{ basket.0.total_cost|floatformat:'2g' }} $</div>
+                <div class="check">
+                    <div class="modal-line"></div>
+                    {{ basket.0.total_cost|floatformat:'2g' }} $
+                </div>
             </div>
 
         </div>
     </div>
 
 
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/checkCheckout.js' %}"></script>
 {% endblock %}

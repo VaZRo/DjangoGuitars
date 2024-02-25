@@ -838,6 +838,11 @@ td a {
     padding: 10px;
 }
 
+.owner-date{
+    display: flex;
+
+}
+
 @media screen and (max-width: 1150px) {
     .menu.sticky {
         transform: none !important;
