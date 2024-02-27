@@ -82,10 +82,12 @@ def basket_edit(request, pk, quantity):
 def checkout(request):
     basket_items = Basket.objects.filter(user=request.user)
 
-    context = {
-        'basket': basket_items,
-    }
-    return render(request, 'checkout.html', context)
+    if basket_items:
+        context = {
+            'basket': basket_items,
+        }
+        return render(request, 'checkout.html', context)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 
@@ -119,7 +121,7 @@ def create_order(request):
 
         basket_items.delete()
 
-        return render(request, 'checkout.html', context)
+        return render(request, 'thanku.html', context)
     else:
         print("Form errors:", card_form.errors, order_form.errors)
 

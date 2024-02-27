@@ -119,6 +119,12 @@ def index(request):
     return render(request, 'index.html', context)
 
 
+def thanku(request):
+    basket = get_basket(request.user)
+    context = get_data(basket=basket)
+    return render(request, 'thanku.html', context)
+
+
 def products(request):
     basket = get_basket(request.user)
     context = get_data(basket=basket)

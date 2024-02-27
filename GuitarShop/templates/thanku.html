@@ -1,0 +1,22 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="interface">
+        <div class="thanku">
+            <h1>Thank You For Your Purchase</h1>
+            <a href="{% url 'products:index' %}">
+                <button>BACK TO SHOP</button>
+            </a>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/checkCheckout.js' %}"></script>
+{% endblock %}

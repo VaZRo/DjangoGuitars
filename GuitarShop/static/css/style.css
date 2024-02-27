@@ -843,7 +843,29 @@ td a {
 
 }
 
+.thanku {
+    height:  60vh;  /* Занимает 100% высоты видимой области (viewport height) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanku h1 {
+    margin-bottom: 20px;  /* Регулируйте отступ вниз от заголовка, по вашему усмотрению */
+    text-align: center;
+}
+
+.thanku button {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1150px) {
+
+    .owner-date{
+        flex-direction: column;
+    }
+
     .menu.sticky {
         transform: none !important;
     }
